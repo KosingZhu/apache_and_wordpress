@@ -624,31 +624,7 @@ switch ( $action ) {
 							<th><?php _e( 'Profile Picture' ); ?></th>
 							<td>
 								<?php echo get_avatar( $user_id ); ?>
-								<p class="description">
-									<?php
-									if ( IS_PROFILE_PAGE ) {
-										$description = sprintf(
-											/* translators: %s: Gravatar URL. */
-											__( '<a href="%s">You can change your profile picture on Gravatar</a>.' ),
-											/* translators: The localized Gravatar URL. */
-											__( 'https://gravatar.com/' )
-										);
-									} else {
-										$description = '';
-									}
-
-									/**
-									 * Filters the user profile picture description displayed under the Gravatar.
-									 *
-									 * @since 4.4.0
-									 * @since 4.7.0 Added the `$profile_user` parameter.
-									 *
-									 * @param string  $description  The description that will be printed.
-									 * @param WP_User $profile_user The current WP_User object.
-									 */
-									echo apply_filters( 'user_profile_picture_description', $description, $profile_user );
-									?>
-								</p>
+								<!-- 去除Gravatar描述信息，只显示头像 -->
 							</td>
 						</tr>
 					<?php endif; ?>

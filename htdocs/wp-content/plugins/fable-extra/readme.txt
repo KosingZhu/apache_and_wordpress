@@ -4,7 +4,7 @@ Tags: import, content, demo, data, widgets, settings, redux, theme options
 Requires at least: 5.2
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -29,6 +29,9 @@ Used for WP Fable Themes.
 3. Activate 'Fable Extra' from your Plugins page.
 
 == Changelog ==
+
+= 1.0.9 =
+* Add eKart Theme Functionality
 
 = 1.0.8 =
 * Add EasyBuy Theme Functionality

@@ -4319,8 +4319,8 @@ function the_shortlink( $text = '', $title = '', $before = '', $after = '' ) {
  * @return string|false The URL of the avatar on success, false on failure.
  */
 function get_avatar_url( $id_or_email, $args = null ) {
-	$args = get_avatar_data( $id_or_email, $args );
-	return $args['url'];
+	#$args = get_avatar_data( $id_or_email, $args );
+	#return $args['url'];
 }
 
 /**
@@ -4551,6 +4551,7 @@ function get_avatar_data( $id_or_email, $args = null ) {
 	 * The Gravatar website redirects HTTP requests to HTTPS URLs so always
 	 * use the HTTPS scheme to avoid unnecessary redirects.
 	 */
+
 	$url = 'https://secure.gravatar.com/avatar/' . $email_hash;
 
 	$url = add_query_arg(
@@ -4568,7 +4569,7 @@ function get_avatar_data( $id_or_email, $args = null ) {
 	 *                            user email, WP_User object, WP_Post object, or WP_Comment object.
 	 * @param array  $args        Arguments passed to get_avatar_data(), after processing.
 	 */
-	$args['url'] = apply_filters( 'get_avatar_url', $url, $id_or_email, $args );
+	 $args['url'] = apply_filters( 'get_avatar_url', $url, $id_or_email, $args );
 
 	/**
 	 * Filters the avatar data.

@@ -43,7 +43,7 @@ if($shopire_slider_options_hide_show=='1'):
 						<div class="wf_slider-innercell">
 							<div class="wf-container">
 								<div class="wf-row wf-text-left">
-									<div class="wf-col-lg-7 wf-col-md-6 first wf-my-auto">
+									<div class="wf-col-lg-7 wf-col-md-8 wf-col-sm-8 first wf-my-auto">
 										<div class="wf_slider-content">
 											 <?php if ( ! empty( $title ) ) : ?>
 												<h5 class="subtitle"><i class="far fa-bolt"></i> <?php echo wp_kses( html_entity_decode( $title ), $allowed_html ); ?></h5>
@@ -65,7 +65,7 @@ if($shopire_slider_options_hide_show=='1'):
 										</div>
 									</div>
 									<?php if ( ! empty( $image2 ) ) : ?>
-										<div class="wf-col-lg-5 wf-col-md-6 last wf-my-auto">
+										<div class="wf-col-lg-5 wf-col-md-4 wf-col-sm-4 last wf-my-auto wf-d-sm-block wf-d-none">
 											<div class="banner-img">
 												<img src="<?php echo esc_url($image2); ?>" alt="<?php echo wp_kses( html_entity_decode( $title ), $allowed_html ); ?>"/>
 											</div>

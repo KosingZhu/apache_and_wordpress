@@ -17,7 +17,7 @@ class fable_extra_Activator {
         $item_details_page = get_option('item_details_page');
 		$fable_current_theme = wp_get_theme(); // gets the current theme
 		if(!$item_details_page){
-		if( 'Shopire' == $fable_current_theme->name || 'MiniCart' == $fable_current_theme->name  || 'EazyShop' == $fable_current_theme->name  || 'EasyBuy' == $fable_current_theme->name){
+		if( 'Shopire' == $fable_current_theme->name || 'MiniCart' == $fable_current_theme->name  || 'EazyShop' == $fable_current_theme->name  || 'EasyBuy' == $fable_current_theme->name  || 'eKart' == $fable_current_theme->name){
 				require WPFE_PATH .'inc/themes/shopire/fresh-site-data/media.php';
 				require WPFE_PATH .'inc/themes/shopire/fresh-site-data/widget.php';
 			}	

@@ -2,7 +2,7 @@
 Theme Name: 	   EasyBuy
 Text Domain: 	   easybuy
 Template: 		   shopire
-Version:            0.9
+Version:            1.0.2
 Tested up to:       6.8
 Requires at least:  4.7
 Requires PHP:       5.6
@@ -528,4 +528,18 @@ with others.
 .wp-block-archives-list a {
     font-weight: 600;
     color: var(--wf-secondary-color);
+}
+
+.wp-block-archives-list a:hover, 
+.wp-block-archives-list a:focus {
+    color: var(--wf-main-color);
+}
+
+.wp-block-page-list.has-background {
+    padding: 1rem;
+}
+
+a.wp-block-button__link:hover, 
+a.wp-block-button__link:focus {
+    color: #fff;
 }
