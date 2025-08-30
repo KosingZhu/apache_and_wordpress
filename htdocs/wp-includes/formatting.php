@@ -4479,14 +4479,14 @@ function esc_sql( $data ) {
 function esc_url( $url, $protocols = null, $_context = 'display' ) {
 	$original_url = $url;
 
-	if ( '' === $url ) {
+	if ( '' === $url || is_null(value: $url ) ) {
 		return $url;
 	}
 
 	$url = str_replace( ' ', '%20', ltrim( $url ) );
 	$url = preg_replace( '|[^a-z0-9-~+_.?#=!&;,/:%@$\|*\'()\[\]\\x80-\\xff]|i', '', $url );
 
-	if ( '' === $url ) {
+	if ( '' === $url || is_null(value: $url )) {
 		return $url;
 	}
 
