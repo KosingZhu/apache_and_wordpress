@@ -135,7 +135,7 @@ define( 'NONCE_SALT',       '&z=}D_uvV`<&=c7saTUc*7`ShxV[-yu2LVQg;yOu<C+HJB(^bml
 
  */
 
-$table_prefix = 'wp1_';
+$table_prefix = 'wp_';
 
 
 /**
