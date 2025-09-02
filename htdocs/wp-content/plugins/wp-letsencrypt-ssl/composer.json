@@ -1,0 +1,13 @@
+{
+  "name": "wpencryption/wp-encryption",
+  "description": "WordPress SSL Plugin",
+  "type": "library",
+  "require": {
+    "php": ">=5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "WPLEClient\\": "lib/"
+    }
+  }
+}
