@@ -1,0 +1,82 @@
+{
+	"title" : "inbound-stock",
+	"version" : 0,
+	"primaryKey" : "id",
+	"type" : "object",
+	"required" : [
+		"_deleted",
+		"_rev",
+		"_meta",
+		"_attachments",
+		"id"
+	],
+	"properties" : {
+		"id" : {
+			"type" : "string"
+		},
+		"name" : {
+			"type" : "string"
+		},
+		"type" : {
+			"type" : "string"
+		},
+		"sku" : {
+			"type" : "string"
+		},
+		"dateOrdered" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateOrderedGmt" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateExpected" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateExpectedGmt" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"inboundStock" : {
+			"type" : "number"
+		},
+		"purchaseOrder" : {
+			"type" : "number"
+		},
+		"_id" : {
+			"type" : "string"
+		},
+		"trash" : {
+			"type" : "boolean"
+		},
+		"deleted" : {
+			"type" : "boolean"
+		},
+		"_rev" : {
+			"type" : "string",
+			"minLength" : 1
+		},
+		"_deleted" : {
+			"type" : "boolean"
+		},
+		"_meta" : {
+			"type" : "object",
+			"required" : [
+				"lwt"
+			],
+			"properties" : {
+				"lwt" : {
+					"type" : "number",
+					"minimum" : 1,
+					"maximum" : 1000000000000000,
+					"multipleOf" : 0.01
+				}
+			}
+		},
+		"_attachments" : {
+			"type" : "object"
+		}
+	}
+}

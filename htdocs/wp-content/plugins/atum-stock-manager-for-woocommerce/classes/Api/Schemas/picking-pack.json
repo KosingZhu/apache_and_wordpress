@@ -1,0 +1,204 @@
+{
+	"title" : "picking-pack",
+	"version" : 0,
+	"primaryKey" : "id",
+	"type" : "object",
+	"required" : [
+		"_deleted",
+		"_rev",
+		"_meta",
+		"_attachments",
+		"id"
+	],
+	"properties" : {
+		"id" : {
+			"type" : "number"
+		},
+		"_id" : {
+			"type" : "string"
+		},
+		"_rev" : {
+			"type" : "string",
+			"minLength" : 1
+		},
+		"_deleted" : {
+			"type" : "boolean"
+		},
+		"name" : {
+			"type" : "string"
+		},
+		"user" : {
+			"oneOf" : [
+				{
+					"type" : "string"
+				},
+				{
+					"type" : "object",
+					"properties" : {
+						"id" : {
+							"type" : "number"
+						},
+						"_id" : {
+							"type" : "string"
+						}
+					}
+				}
+			]
+		},
+		"status" : {
+			"type" : "string",
+			"enum" : [
+				"pending",
+				"picking",
+				"picked",
+				"packing",
+				"packed",
+				"completed"
+			]
+		},
+		"description" : {
+			"type" : "string"
+		},
+		"lines" : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"item" : {
+						"type" : "object",
+						"properties" : {
+							"id" : {
+								"type" : "number"
+							},
+							"_id" : {
+								"type" : "string"
+							}
+						}
+					},
+					"name" : {
+						"type" : "string"
+					},
+					"notes" : {
+						"type" : "array",
+						"items" : {
+							"type" : "object",
+							"properties" : {
+								"name" : {
+									"type" : "string"
+								},
+								"description" : {
+									"type" : "string"
+								}
+							}
+						}
+					},
+					"orderLines" : {
+						"type" : "array",
+						"items" : {
+							"type" : "object",
+							"properties" : {
+								"order" : {
+									"type" : "object",
+									"properties" : {
+										"id" : {
+											"type" : "number"
+										},
+										"_id" : {
+											"type" : "string"
+										}
+									}
+								},
+								"orderLine" : {
+									"type" : "object",
+									"properties" : {
+										"id" : {
+											"type" : "number"
+										},
+										"_id" : {
+											"type" : "string"
+										}
+									}
+								},
+								"count" : {
+									"type" : "number"
+								},
+								"quantity" : {
+									"type" : "number"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"itemType" : {
+			"type" : "string",
+			"enum" : [
+				"picking-pack"
+			]
+		},
+		"datePicked" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"datePickedGMT" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"datePacked" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"datePackedGMT" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"orders" : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "number"
+					},
+					"_id" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"dateCreated" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateCreatedGMT" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateModified" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateModifiedGMT" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"_meta" : {
+			"type" : "object",
+			"required" : [
+				"lwt"
+			],
+			"properties" : {
+				"lwt" : {
+					"type" : "number",
+					"minimum" : 1,
+					"maximum" : 1000000000000000,
+					"multipleOf" : 0.01
+				}
+			}
+		},
+		"_attachments" : {
+			"type" : "object"
+		}
+	}
+}

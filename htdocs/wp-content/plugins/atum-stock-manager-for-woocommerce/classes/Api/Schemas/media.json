@@ -1,0 +1,108 @@
+{
+	"title" : "media",
+	"version" : 0,
+	"primaryKey" : "_id",
+	"type" : "object",
+	"required" : [
+		"_deleted",
+		"_rev",
+		"_meta",
+		"_attachments",
+		"_id"
+	],
+	"properties" : {
+		"id" : {
+			"type" : "string"
+		},
+		"_id" : {
+			"type" : "string"
+		},
+		"_rev" : {
+			"type" : "string",
+			"minLength" : 1
+		},
+		"uid" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"name" : {
+			"type" : "string"
+		},
+		"slug" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"alt" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"type" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"src" : {
+			"type" : "string"
+		},
+		"file" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"dateCreated" : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateCreatedGMT" : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateModified" : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateModifiedGMT" : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"_deleted" : {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"itemType" : {
+			"type" : "string",
+			"enum" : ["media"]
+		},
+		"conflict" : {
+			"type" : "boolean",
+			"default" : false
+		},
+		"deleted" : {
+			"type" : "boolean",
+			"default" : false
+		},
+		"trash" : {
+			"type" : "boolean",
+			"default" : false
+		},
+		"_meta" : {
+			"type" : "object",
+			"required" : [
+				"lwt"
+			],
+			"properties" : {
+				"lwt" : {
+					"type" : "number",
+					"minimum" : 1,
+					"maximum" : 1000000000000000,
+					"multipleOf" : 0.01
+				}
+			}
+		},
+		"_attachments" : {
+			"type" : "object"
+		}
+	}
+}

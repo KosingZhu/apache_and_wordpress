@@ -1,0 +1,11 @@
+# Prevent direct access to exported files
+Order Allow,Deny
+Deny from all
+
+# Allow internal WordPress requests
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/wp-admin [NC]
+RewriteCond %{REQUEST_URI} !^/wp-includes [NC]
+RewriteRule ^.*$ - [F,L]
+</IfModule>

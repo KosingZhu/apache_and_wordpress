@@ -1,0 +1,170 @@
+{
+	"title" : "supplier",
+	"version" : 0,
+	"primaryKey" : "id",
+	"type" : "object",
+	"required" : [
+		"_deleted",
+        "_rev",
+        "_meta",
+        "_attachments",
+		"id",
+		"name"
+	],
+	"properties" : {
+		"id" : {
+			"type" : "string"
+		},
+		"name" : {
+			"type" : "string"
+		},
+		"description" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"slug" : {
+			"type" : "string"
+		},
+		"status" : {
+			"type" : "string"
+		},
+		"trash" : {
+			"type" : "boolean"
+		},
+		"dateCreated" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateCreatedGMT" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateModified" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateModifiedGMT" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"address" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"assignedTo" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"city" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"country" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"fax" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"generalEmail" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"orderingEmail" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"orderingUrl" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"phone" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"state" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"taxNumber" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"website" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"zipCode" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"location" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"currency" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"barcode" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"code" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"conflict" : {
+			"type" : "boolean"
+		},
+		"deleted" : {
+			"type" : "boolean"
+		},
+		"itemType" : {
+			"type" : "string"
+		},
+		"image" : {
+			"type" : "object",
+			"nullable" : true,
+			"properties" : {
+				"id" : {
+					"type" : "number"
+				},
+				"src" : {
+					"type" : "string"
+				},
+				"alt" : {
+					"type" : "string"
+				}
+			}
+		},
+		"_id" : {
+			"type" : "string"
+		},
+		"_rev" : {
+			"type" : "string",
+			"minLength" : 1
+		},
+		"_deleted" : {
+			"type" : "boolean"
+		},
+		"_meta" : {
+            "type" : "object",
+            "required" : [
+                "lwt"
+            ],
+            "properties" : {
+                "lwt" : {
+                    "type" : "number",
+                    "multipleOf" : 0.01,
+                    "minimum" : 1,
+                    "maximum" : 1000000000000000
+                }
+            }
+        },
+		"_attachments" : {
+            "type" : "object"
+        }
+	}
+}

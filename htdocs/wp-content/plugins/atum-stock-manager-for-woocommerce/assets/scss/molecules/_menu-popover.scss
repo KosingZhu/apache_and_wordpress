@@ -1,0 +1,114 @@
+@use "../common/variables" as *;
+@use "../common/mixins/utilities" as *;
+
+//
+// Menu Popover component
+//-----------------------
+
+.popover {
+	&.menu-popover {
+		
+		.popover-header {
+			margin: 0;
+			padding-bottom: 3px;
+			padding-top: 3px;
+			background-color: $gray-200;
+			
+			> span {
+				font-size: 12px;
+				font-weight: 500;
+				color: $blue-dark;
+				line-height: 1;
+				max-width: 150px;
+				display: inline-block;
+				@include text-overflow;
+			}
+		}
+		
+		.popover-body {
+			padding: 0;
+			
+			> div {
+				width: 100%;
+			}
+		}
+		
+		ul {
+			margin-top: 6px;
+			margin-bottom: 0;
+			text-align: left;
+			width: 100%;
+			padding: 0;
+			max-height: 296px;
+			overflow-y: auto;
+			
+			li {
+				white-space: nowrap;
+				font-size: 12px;
+				padding: 2px 7px;
+				line-height: 2;
+				
+				&:not(:last-child) {
+					border-bottom: 1px solid $gray-400;
+				}
+				
+				&:last-child {
+					padding-bottom: 0;
+				}
+				
+				&.no-actions {
+					text-align: center;
+					color: $gray-500;
+					
+					&:before, &:after {
+						content: '--';
+					}
+					
+					&:before {
+						margin-right: 3px;
+					}
+					
+					&:after {
+						margin-left: 3px;
+					}
+					
+					&:hover {
+						color: $gray-500;
+					}
+					
+				}
+				
+				a {
+					text-decoration: none;
+					color: $gray-600;
+					font-weight: normal;
+					padding: 10px 0;
+					
+					&:focus {
+						box-shadow: none;
+						outline: none;
+					}
+					
+					&.disabled {
+						pointer-events: none;
+						opacity: .6;
+						color: $gray-600 !important;
+					}
+				}
+				
+				&:hover {
+					&, a {
+						color: $primary;
+					}
+				}
+				
+				i {
+					font-size: 15px;
+					margin-right: 2px;
+					vertical-align: -1px;
+				}
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,241 @@
+{
+	"title" : "coupon",
+	"version" : 0,
+	"primaryKey" : "id",
+	"type" : "object",
+	"required" : [
+		"_deleted",
+		"_rev",
+		"_meta",
+		"_attachments",
+		"id"
+	],
+	"properties" : {
+		"id" : {
+			"type" : "string"
+		},
+		"_id" : {
+			"type" : "string"
+		},
+		"slug": {
+			"type": "string"
+		},
+		"uid": {
+			"type" : "string",
+			"nullable" : true
+		},
+		"itemType": {
+			"type": "string"
+		},
+		"code" : {
+			"type" : "string"
+		},
+		"amount" : {
+			"type" : "number"
+		},
+		"status": {
+			"type": "string"
+		},
+		"dateCreated": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"dateCreatedGMT": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"dateModified": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"dateModifiedGMT": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"discountType" : {
+			"type" : "string",
+			"enum" : [
+				"percent",
+				"fixed_cart",
+				"fixed_product"
+			]
+		},
+		"description" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"dateExpires" : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateExpiresGMT" : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"usageCount" : {
+			"type" : "number"
+		},
+		"individualUse" : {
+			"type" : "boolean"
+		},
+		"products" : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "number"
+					},
+					"_id" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"excludedProducts" : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "number"
+					},
+					"_id" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"usageLimit" : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"usageLimitPerUser" : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"usageLimitPerItems" : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"freeShipping" : {
+			"type" : "boolean"
+		},
+		"productCategories" : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "number"
+					},
+					"_id" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"excludedProductCategories" : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "number"
+					},
+					"_id" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"excludeSaleItems" : {
+			"type" : "boolean"
+		},
+		"minimumAmount" : {
+			"type" : "number"
+		},
+		"maximumAmount" : {
+			"type" : "number"
+		},
+		"emailRestrictions" : {
+			"type" : "array",
+			"items" : {
+				"type" : "string"
+			}
+		},
+		"usedBy" : {
+			"type" : "array",
+			"items" : {
+				"oneOf" : [
+					{
+						"type" : "object",
+						"properties" : {
+							"id" : {
+								"type" : "number"
+							},
+							"_id" : {
+								"type" : "string"
+							}
+						}
+					},
+					{
+						"type" : "string"
+					}
+				]
+			}
+		},
+		"metaData" : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "number"
+					},
+					"key" : {
+						"type" : "string"
+					},
+					"value" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"trash" : {
+			"type" : "boolean"
+		},
+		"deleted" : {
+			"type" : "boolean"
+		},
+		"conflict" : {
+			"type" : "boolean"
+		},
+		"_rev" : {
+			"type" : "string",
+			"minLength" : 1
+		},
+		"_deleted" : {
+			"type" : "boolean"
+		},
+		"_meta" : {
+			"type" : "object",
+			"required" : [
+				"lwt"
+			],
+			"properties" : {
+				"lwt" : {
+					"type" : "number",
+					"minimum" : 1,
+					"maximum" : 1000000000000000,
+					"multipleOf" : 0.01
+				}
+			}
+		},
+		"_attachments" : {
+			"type" : "object"
+		}
+	}
+}

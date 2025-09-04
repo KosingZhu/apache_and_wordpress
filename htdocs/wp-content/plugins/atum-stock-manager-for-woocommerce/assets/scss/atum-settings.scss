@@ -1,0 +1,23 @@
+//
+// Atum settings page
+//-------------------
+
+@use "common/root";
+
+@use "atoms/tooltip";
+@use "atoms/buttons";
+@use "atoms/select2";
+@use "atoms/atum-icons";
+@use "atoms/page-title";
+@use "atoms/form-check";
+@use "atoms/image-selector";
+@use "atoms/help-tip";
+
+@use "molecules/alert";
+@use "molecules/button-groups";
+@use "molecules/sweet-alert";
+@use "molecules/atum-footer";
+@use "molecules/meta-boxes";
+@use "molecules/bootstrap-datetimepicker";
+
+@use "organisms/pages/settings";

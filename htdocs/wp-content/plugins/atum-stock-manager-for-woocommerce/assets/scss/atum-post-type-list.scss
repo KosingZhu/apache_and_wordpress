@@ -1,0 +1,17 @@
+//
+// ATUM Post Type List
+//---------------------
+
+@use "common/root";
+
+@use "atoms/select2";
+@use "atoms/atum-icons";
+@use "atoms/tooltip";
+@use "atoms/buttons";
+@use "atoms/page-title";
+@use "atoms/help-tip";
+
+@use "molecules/block-ui";
+@use "molecules/atum-footer";
+@use "molecules/pagination";
+@use "molecules/post-type-list-table";

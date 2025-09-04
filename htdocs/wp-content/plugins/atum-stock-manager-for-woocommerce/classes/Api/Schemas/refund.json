@@ -1,0 +1,152 @@
+{
+	"title" : "refund",
+	"version" : 0,
+	"primaryKey" : "_id",
+	"type" : "object",
+	"required" : [
+		"_deleted",
+		"_rev",
+		"_meta",
+		"_attachments",
+		"_id"
+	],
+	"properties" : {
+		"id" : {
+			"type" : "string"
+		},
+		"dateCreated" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateCreatedGMT" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateModified" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"dateModifiedGMT" : {
+			"type" : "string",
+			"format" : "date-time"
+		},
+		"refundedBy" : {
+			"type" : "string"
+		},
+		"reason" : {
+			"type" : "string"
+		},
+		"amount" : {
+			"type" : "number"
+		},
+		"lineItems" : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "string"
+					},
+					"_id" : {
+						"type" : "string"
+					},
+					"name" : {
+						"type" : "string"
+					},
+					"quantity" : {
+						"type" : "number"
+					},
+					"total" : {
+						"type" : "number"
+					},
+					"subtotal" : {
+						"type" : "number"
+					},
+					"_deleted" : {
+						"type" : "boolean"
+					}
+				}
+			}
+		},
+		"parent" : {
+			"type" : "object",
+			"nullable" : true,
+			"properties" : {
+				"id" : {
+					"type" : "string"
+				},
+				"_id" : {
+					"type" : "string"
+				}
+			}
+		},
+		"taxRate" : {
+			"type" : "object",
+			"properties" : {
+				"id" : {
+					"type" : "string"
+				},
+				"_id" : {
+					"type" : "string"
+				}
+			}
+		},
+		"taxClass" : {
+			"type" : "object",
+			"nullable" : true,
+			"properties" : {
+				"_id"   : {
+					"type" : "string"
+				},
+				"slug" : {
+					"type" : "string"
+				},
+				"name" : {
+					"type" : "string"
+				}
+			}
+		},
+		"refundedPayment" : {
+			"type" : "boolean"
+		},
+		"trash" : {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"deleted" : {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"_deleted" : {
+			"type" : "boolean"
+		},
+		"conflict" : {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"_id" : {
+			"type" : "string"
+		},
+		"_rev" : {
+			"type" : "string",
+			"minLength" : 1
+		},
+		"_meta" : {
+			"type" : "object",
+			"required" : [
+				"lwt"
+			],
+			"properties" : {
+				"lwt" : {
+					"type" : "number",
+					"minimum" : 1,
+					"maximum" : 1000000000000000,
+					"multipleOf" : 0.01
+				}
+			}
+		},
+		"_attachments" : {
+			"type" : "object"
+		}
+	}
+}

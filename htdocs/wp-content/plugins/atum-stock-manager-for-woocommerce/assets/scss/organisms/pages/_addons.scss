@@ -1,0 +1,879 @@
+@use "../../common/breakpoints" as *;
+@use "../../common/variables" as *;
+@use "../../common/mixins/utilities" as *;
+
+//
+// Atum add-ons
+//---------------
+
+@use "sass:math";
+
+html {
+	scroll-behavior: smooth;
+}
+
+#wpbody-content {
+	padding-bottom: 0;
+	
+	> .notice {
+		margin-left: 0;
+		
+		~ .atum-addons {
+			margin-top: 10px;
+		}
+	}
+}
+
+.atum-addons {
+	margin-bottom: 60px;
+	
+	&__wrap {
+		padding-right: 20px;
+		transition: .3s ease-in-out;
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: auto 250px;
+		grid-template-rows: 52px 1fr auto;
+		grid-template-areas:
+			"header  sidebar"
+			"content sidebar"
+			"footer footer";
+		
+		&.with-collapsed {
+			grid-template-columns: auto 40px;
+		}
+		
+		@include tablet-max {
+			grid-template-columns: 4fr !important;
+			grid-template-rows: auto;
+			padding-right: 10px;
+			grid-template-areas:
+                "sidebar"
+                "header"
+                "content"
+				"footer";
+		}
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	&__header {
+		position: relative;
+		height: 300px;
+		background: $blue-light url('#{$atum-img-path}dashboard/header-bg.png') center bottom;
+		background-size: cover;
+		@include vertical-align-flex();
+		flex-wrap: wrap;
+		text-align: center;
+		margin-bottom: math.div($grid-gutter-width, 2);
+		margin-left: -20px;
+		
+		&-logo {
+			flex-grow: 1;
+			width: 100%;
+		}
+		
+		h3 {
+			color: $blue-dark;
+			width: 734px;
+			max-width: 90%;
+			margin: auto;
+			line-height: 1.2;
+			font-weight: 200;
+		}
+		
+		&-buttons {
+			padding: math.div($grid-gutter-width, 2);
+			text-align: center;
+			
+			.btn {
+				text-transform: uppercase;
+				font-size: 12px;
+			}
+			
+			.btn-outline-primary {
+				background-color: $white;
+				
+				&:hover {
+					color: $primary;
+					background-color: rgba($white, .3);
+				}
+			}
+			
+			@include tablet-max {
+				right: 0;
+			}
+		}
+		
+		img {
+			max-width: 320px;
+			margin-bottom: 5px;
+			
+			@include mobile-max {
+				max-width: 220px;
+			}
+		}
+		
+		&-notice {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding-left: math.div($grid-gutter-width, 2);
+			padding-bottom: 5px;
+			font-size: 11px;
+			color: $blue-dark;
+			font-weight: 300;
+			
+			span {
+				color: $primary;
+				margin-right: 5px;
+			}
+			
+			.wc-rating-link {
+				color: $primary;
+			}
+			
+			@include tablet-max {
+				right: 0;
+			}
+			
+			@include mobile-max {
+				font-size: 10px;
+				line-height: 1.3;
+			}
+			
+		}
+		
+	}
+	
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0;
+		background-color: $white;
+		box-shadow: 0 4px 0 0 $gray-200;
+		border-radius: 8px;
+		padding: 0 10px;
+		grid-area: header;
+		
+		@include tablet-max-wp {
+			flex-wrap: wrap;
+			justify-content: center;
+			margin-bottom: 15px;
+			border-bottom: none;
+		}
+		
+		@include mobile-max {
+			margin: 0 11px 15px;
+			
+			&.no-margin {
+				margin: 0 11px 15px;
+			}
+		}
+		
+		.nav-container-box {
+			flex-grow: 1;
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 5px;
+		}
+		
+		.nav-with-scroll-effect {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			cursor: grab;
+			overflow-x: hidden;
+			overflow-y: visible;
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+			-webkit-overflow-scrolling: touch;
+			white-space: nowrap;
+			width: 100%;
+			max-width: 536px;
+			margin: 0;
+			position: relative;
+			
+			@include tablet-max {
+				max-width: 430px;
+			}
+			
+			@media screen and (max-width: 648px) {
+				max-width: 330px;
+			}
+			
+			@include mobile-max {
+				max-width: 250px;
+			}
+			
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			
+			.subsubsub {
+				margin: 0;
+			}
+			
+			&.dragging {
+				a {
+					pointer-events: none;
+				}
+			}
+			
+			.input-group {
+				position: static;
+			}
+			
+		}
+		
+		.overflow-opacity-effect-right, .overflow-opacity-effect-left {
+			width: 100px;
+			position: absolute;
+			z-index: 998;
+			height: 49px;
+			pointer-events: none;
+			background-repeat: no-repeat;
+		}
+		
+		.overflow-opacity-effect-right {
+			right: 0;
+			background-image: var(--overflow-opacity-rigth);
+		}
+		
+		.overflow-opacity-effect-left {
+			display: none;
+			left: 0;
+			background-image: var(--overflow-opacity-left);
+		}
+		
+		.subsubsub {
+			width: 100%;
+			position: relative;
+			font-size: 16px;
+			letter-spacing: 0.4px;
+			font-weight: bold;
+			text-transform: capitalize;
+			display: flex;
+			align-items: center;
+			margin: 0;
+			
+			&.extend-list-table {
+				width: inherit;
+				margin: 10px 0 !important;
+				flex-wrap: nowrap;
+				justify-content: flex-start;
+				border-radius: 0;
+				border-bottom: 0;
+				
+				li {
+					margin-right: 15px;
+					color: $gray-600;
+					text-transform: uppercase;
+					padding: 0;
+					
+					span {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin-left: 3px;
+						border-radius: 5px;
+						line-height: 32px;
+						cursor: pointer;
+						transition: .2s ease-in-out;
+						
+						&.active {
+							border-radius: 5px;
+							background-color: $primary;
+							font-size: 16px;
+							padding: 0 10px;
+							font-weight: bold;
+							letter-spacing: 0.4px;
+							color: $white;
+							cursor: default;
+							
+							&:hover {
+								color: $white;
+							}
+							
+						}
+						
+						&:hover {
+							color: $primary;
+						}
+						
+					}
+					
+				}
+				
+				@include mobile-max {
+					
+					&:first-child {
+						li {
+							
+							span, span:active {
+								margin-left: 0;
+							}
+						}
+					}
+				}
+			}
+			
+			@include tablet-max-wp{
+				margin: 10px 10px;
+				flex-wrap: wrap;
+				justify-content: center;
+				border-bottom: none;
+			}
+			
+			@include mobile-max{
+				justify-content: flex-start;
+			}
+			
+		}
+		
+		&-buttons {
+			display: inline-flex;
+			align-items: center;
+			gap: 5px;
+			
+			.btn {
+				&:hover, &:focus {
+					outline: none;
+					box-shadow: none;
+				}
+			}
+		}
+		
+	}
+	
+	&__search {
+		position: relative;
+		
+		&:not(.is-searching) {
+			&:after {
+				content: $atmi-magnifier;
+				font-family: $atum-icon-font;
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				transform: translateY(-50%);
+				color: $gray-600;
+			}
+		}
+		
+		#addons-search {
+			border: 1px solid $gray-300;
+			border-radius: 5px;
+			color: $gray-600;
+			font-size: 12px;
+			min-height: auto;
+			height: auto;
+			padding: 0.11rem 0.6rem;
+		}
+	}
+	
+	#atum-addons-list {
+		margin-top: -20px;
+		grid-area: content;
+	}
+	
+	&__sidebar {
+		grid-area: sidebar;
+		background-color: $white;
+		padding: math.div($grid-gutter-width, 2);
+		border-radius: 8px;
+		box-shadow: 0 4px 0 0 $gray-200;
+		
+		header {
+			margin-bottom: math.div($grid-gutter-width, 2);
+			
+			a {
+				color: $gray-500;
+				text-decoration: none;
+				transition: .2s ease-in-out;
+				
+				&:hover {
+					color: $primary;
+				}
+				
+				&:focus {
+					outline: none;
+					box-shadow: none;
+				}
+			}
+			
+			@include tablet-max {
+				.atum-icon {
+					&:before {
+						content: $atmi-arrow-up-circle;
+					}
+				}
+			}
+		}
+		
+		.dash-card {
+			width: 100%;
+			margin: 0 0 math.div($grid-gutter-width, 2);
+			border: none;
+			
+			img {
+				opacity: .65;
+			}
+			
+			.card-content {
+				p {
+					color: $gray-600;
+					font-weight: normal;
+				}
+			}
+			
+			&.docs {
+				img {
+					right: -30px;
+				}
+			}
+			
+			&.add-ons {
+				img {
+					right: -20px;
+				}
+			}
+			
+			&.support {
+				img {
+					right: -10px;
+				}
+			}
+			
+			@include tablet-max {
+				.card-img {
+					display: block;
+				}
+			};
+		}
+		
+		&.collapsed {
+			width: math.div($grid-gutter-width, 2);
+			
+			header {
+				writing-mode: vertical-lr;
+				
+				.atum-icon {
+					&:before {
+						content: $atmi-arrow-left-circle;
+					}
+				}
+			}
+			
+			.dash-card {
+				display: none;
+			}
+			
+			@include tablet-max {
+				width: calc(100% - 30px);
+				height: math.div($grid-gutter-width, 2);
+				
+				header {
+					writing-mode: unset;
+					
+					.atum-icon {
+						&:before {
+							content: $atmi-arrow-down-circle;
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+	.atum-addon {
+		margin-top: math.div($grid-gutter-width, 3) * 2;
+		background-color: $white;
+		display: flex;
+		align-items: stretch;
+		min-height: 222px;
+		border-radius: 8px;
+		box-shadow: 0 4px 0 0 $gray-200;
+		
+		> .more-details {
+			position: relative;
+			width: 300px;
+			min-width: 300px;
+			display: flex;
+			overflow: hidden;
+			
+			&:hover .addon-thumb {
+				transform: scale(1.1);
+			}
+			
+			&:focus {
+				outline: none;
+				box-shadow: none;
+			}
+			
+			.label {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				padding: 3px 9px;
+				color: $white;
+				border-radius: 4px;
+				z-index: 1;
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 300;
+				
+				&.coming-soon {
+					background: $secondary;
+				}
+				
+				&.not-installed {
+					background: $primary;
+				}
+				
+				&.valid {
+					background: $success;
+				}
+				
+				&.inactive, &.invalid, &.disabled, &.expired, &.no-key {
+					background: $danger;
+				}
+				
+				&.trial {
+					background: $purple;
+				}
+				
+			}
+			
+			@media screen and (max-width: 1082px) {
+				min-width: unset;
+			}
+			
+		}
+		
+		.atum-loading {
+			right: 152px;
+			bottom: 3px;
+			@include loader(18px, $primary, 3px, 1s);
+		}
+		
+	}
+	
+	.addon-thumb {
+		width: 100%;
+		background-size: cover;
+		background-position: top center;
+		border-bottom-left-radius: 8px;
+		border-top-left-radius: 8px;
+		transition: .2s ease-in-out;
+	}
+	
+	.addon-details {
+		padding: 15px 20px;
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+	}
+	
+	.addon-header {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: 10px 0;
+		
+		h2 {
+			font-size: 18px;
+			color: $gray-700;
+			margin: 0;
+		}
+		
+		.label {
+			background-color: $secondary;
+			border-radius: 15px;
+			padding: 2px 9px;
+			color: $white;
+			font-size: 11px;
+			line-height: 24px;
+			text-align: center;
+			cursor: default;
+			
+			&.label-warning {
+				background-color: $warning;
+			}
+		}
+	}
+	
+	.addon-description {
+		margin-bottom: math.div($grid-gutter-width, 2);
+		flex-grow: 1;
+		
+		p {
+			margin: 0;
+			flex-grow: 1;
+			font-size: 15px;
+			color: $gray-600;
+		}
+	}
+	
+	.actions__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		
+		> a, > button {
+			flex-grow: 1;
+		}
+	}
+	
+	.alert {
+		font-size: 12px;
+		padding: 0.3rem calc( 0.75rem + 8px );
+		margin-bottom: .3rem;
+	}
+	
+	.addon-footer {
+		.actions {
+			
+			.btn {
+				font-size: .75rem;
+				padding: 0.313rem 0.6rem;
+				text-transform: uppercase;
+				
+				&.cancel-action, &.remove-license {
+					font-size: .65rem;
+					padding: 0.313rem 0.2rem;
+				}
+				
+				&.install-atum-addon {
+					background-color: $success;
+					border-color: $success;
+					
+					+ .cancel-action {
+						font-size: .75rem;
+						padding: 0.313rem 0.6rem;
+					}
+				}
+				
+			}
+			
+			input {
+				font-size: .65rem;
+			}
+			
+			.cancel-action {
+				background-color: transparent;
+				
+				&:hover {
+					background-color: buttonface;
+				}
+			}
+			
+		}
+		
+		.addon-key{
+			display: none;
+			
+			> .wrapper {
+				display: flex;
+				align-items: flex-end;
+				position: relative;
+				gap: 10px;
+			}
+		}
+		
+		.license-key {
+			flex-grow: 1;
+		}
+		
+		.license-info {
+			
+			&:first-child {
+				flex-grow: 1;
+			}
+			
+			.license-label {
+				font-size: .70rem;
+				font-weight: 600;
+				white-space: nowrap;
+			}
+			
+			.license-key, .expires {
+				background-color: $gray-200;
+				font-size: .65rem;
+				font-weight: 400;
+				padding: 4px 10px;
+				border-radius: 5px;
+				@include text-overflow;
+			}
+			
+			.expires.expired {
+				color: $danger;
+			}
+		}
+		
+		.alert {
+			margin-bottom: 10px;
+			
+			a {
+				&:focus {
+					outline: none;
+					box-shadow: none;
+				}
+			}
+		}
+		
+		.alert-warning {
+			border-color: $gray-200;
+			background-color: $gray-200;
+			color: $blue-dark;
+			
+			a {
+				color: $primary;
+			}
+		}
+		
+	}
+	
+	&__grid-view {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: math.div($grid-gutter-width, 2);
+		margin-top: 0 !important;
+		
+		.atum-addon {
+			display: block;
+			min-height: auto;
+			margin: 0;
+			
+			.addon-details {
+				min-height: 300px;
+			}
+			
+			> .more-details {
+				height: 200px;
+				width: 100%;
+			}
+			
+			.addon-thumb {
+				border-radius: 8px 8px 0 0;
+			}
+			
+			.actions__buttons {
+				a, button {
+					margin: 0 !important;
+				}
+			}
+			
+			.addon-key {
+				.wrapper {
+					flex-wrap: wrap;
+					justify-content: space-between;
+					gap: 10px;
+				}
+				
+			}
+		}
+	}
+	
+	.no-results {
+		margin-top: math.div($grid-gutter-width, 2);
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-size: 1.2em;
+		
+		i {
+			font-size: 1.3em;
+		}
+	}
+	
+	@include tablet-max-wp {
+		
+		.addon-footer .actions {
+			display: flex;
+			flex-direction: column;
+			
+			.btn {
+				width: 100%;
+				margin-bottom: .3rem;
+			}
+			
+			.addon-key > .wrapper {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 10px;
+				
+				.license-info {
+					display: flex;
+					align-items: center;
+					gap: 5px;
+					width: 100%;
+					
+					.license-key {
+						flex-grow: 1;
+						margin: 0;
+					}
+					
+				}
+				
+				input.license-key {
+					width: 100%;
+					margin-bottom: 0.3rem;
+				}
+			}
+		}
+	}
+	
+	// Fix empty space at the bottom.
+	footer {
+		grid-area: footer;
+	}
+	
+}
+
+// Auto-Installer.
+.auto-installer-modal {
+	
+	.swal2-html-container {
+		margin-bottom: math.div($grid-gutter-width, 2);
+	}
+	
+	.auto-install-list {
+		padding: 0;
+		margin-top: $grid-gutter-width;
+		
+		li {
+			font-weight: bold;
+			text-align: left;
+			font-size: 15px;
+			line-height: 1.5;
+			
+			i {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 18px;
+				margin-right: 2px;
+			}
+		}
+		
+		code {
+			font-weight: normal;
+			font-size: 10px;
+			padding: 3px 5px;
+			border-radius: 4px;
+		}
+	}
+	
+	.swal2-validation-message {
+		margin-bottom: -1.2em !important;
+	}
+}
+
+@include loader-rotate-animation;

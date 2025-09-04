@@ -1,0 +1,55 @@
+{
+	"background"       : {
+		"bg_image"    : "url(https://stockmanagementlabs.com/wp-content/uploads/2024/09/waves-barcodes.svg)",
+		"bg_position" : "bottom",
+		"bg_size"     : "contain",
+		"bg_repeat"   : "no-repeat",
+		"bg_color"    : "#fff"
+	},
+	"dash_background" : {
+        "bg_color" : "#fff"
+    },
+	"images"           : {
+		"logo"      : "https://stockmanagementlabs.com/wp-content/uploads/2024/09/barcodes-pro-illustration.jpeg",
+		"dash_logo" : "https://stockmanagementlabs.com/wp-content/uploads/2024/09/barcodes-pro-illustration.jpeg",
+		"logo_css"  : "width:85%;margin-bottom:10px;border-radius:5px;",
+		"top_left"  : "https://stockmanagementlabs.com/wp-content/uploads/2024/09/label-barcodes.svg"
+	},
+	"title"            : {
+		"text"       : "<strong>ATUM Barcodes PRO</strong> add-on is here!",
+		"text_color" : "black",
+		"text_size"  : "26px",
+		"text_align" : "center"
+	},
+	"version"          : {
+		"text"       : "",
+		"text_color" : "",
+		"background" : ""
+	},
+	"description"      : {
+		"text"            : "Say goodbye to the hassle of disorganized inventory!<br>Introducing our Barcodes add-on – your new best friend for creating precise, scannable barcodes for products, orders, suppliers, and more.<br><br>This powerful tool not only supports multiple inventories but also allows you to display barcodes in list tables and seamlessly integrate them into emails and PDFs.<br><br>Get ready to take your inventory management to a whole new level, saving you valuable time in the process!",
+		"text_color"      : "#6c757d",
+		"text_size"       : "13px",
+		"text_align"      : "",
+		"dash_text_align" : "left",
+		"padding"         : "15px 9px 25px"
+	},
+	"buttons"          : [
+		{
+			"text"  : "Try it now!",
+			"url"   : "https://stockmanagementlabs.com/addons/atum-barcodes-pro/",
+			"class" : "btn btn-success",
+			"css"   : "",
+			"hover" : ""
+		},
+        {
+			"text"  : "Read the docs",
+			"url"   : "https://stockmanagementlabs.crunch.help/en/atum-barcodes-pro/",
+			"class" : "btn btn-outline-success",
+			"css"   : "",
+			"hover" : ""
+		}
+	],
+	"additional_class" : "",
+	"transient_key"    : "barcodes-pro-launch"
+}

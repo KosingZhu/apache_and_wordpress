@@ -1,0 +1,18 @@
+//
+// ATUM add-ons page
+//------------------
+
+@use "common/root";
+
+@use "atoms/buttons";
+@use "atoms/atum-icons";
+@use "atoms/tooltip";
+@use "atoms/dash-cards";
+
+@use "molecules/alert";
+@use "molecules/block-ui";
+@use "molecules/sweet-alert";
+@use "molecules/atum-modals";
+@use "molecules/atum-footer";
+
+@use "organisms/pages/addons";

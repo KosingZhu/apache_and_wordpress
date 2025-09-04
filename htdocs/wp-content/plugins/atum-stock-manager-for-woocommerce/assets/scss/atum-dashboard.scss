@@ -1,0 +1,25 @@
+//
+// ATUM Dashboard
+//---------------
+
+@use "common/root";
+
+@use "atoms/atum-icons";
+@use "atoms/buttons";
+@use "atoms/nice-select";
+@use "atoms/tooltip";
+@use "atoms/form-check";
+@use "atoms/dash-cards";
+
+@use "molecules/gridstack";
+@use "molecules/sweet-alert";
+@use "molecules/alert";
+
+@use "organisms/pages/dashboard";
+
+@use "organisms/widgets/statistics";
+@use "organisms/widgets/stats-data";
+@use "organisms/widgets/stock-control";
+@use "organisms/widgets/current-stock-value";
+@use "organisms/widgets/videos";
+@use "organisms/widgets/news";

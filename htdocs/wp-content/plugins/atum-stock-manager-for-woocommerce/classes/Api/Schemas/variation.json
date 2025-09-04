@@ -1,0 +1,659 @@
+{
+	"title"      : "variation",
+	"version"    : 0,
+	"primaryKey" : "id",
+	"type"       : "object",
+	"required"   : [
+		"_deleted",
+		"_rev",
+		"_meta",
+		"_attachments",
+		"id"
+	],
+	"properties" : {
+		"id"                  : {
+			"type" : "string"
+		},
+		"uid"                 : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"parent"              : {
+			"type"       : "object",
+			"properties" : {
+				"id"   : {
+					"type" : "string"
+				},
+				"_id" : {
+					"type" : "string"
+				}
+			}
+		},
+		"parentType"          : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"parentName"          : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"parentSku"           : {
+			"type" : "string"
+		},
+		"parentTaxClass"      : {
+			"type" : "object",
+			"nullable" : true,
+			"properties" : {
+				"_id"   : {
+					"type" : "string"
+				},
+				"slug" : {
+					"type" : "string"
+				},
+				"name" : {
+					"type" : "string"
+				}
+			}
+		},
+		"name"                : {
+			"type" : "string"
+		},
+		"slug"                : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"type"                : {
+			"type" : "string"
+		},
+		"itemType"            : {
+			"type" : "string"
+		},
+		"default"             : {
+			"type" : "boolean"
+		},
+		"dateCreated"         : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateCreatedGMT"      : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateModified"        : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateModifiedGMT"     : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"image"               : {
+			"type" : "object",
+			"nullable" : true,
+			"properties" : {
+				"id"    : {
+					"type" : "string"
+				},
+				"src"   : {
+					"type" : "string"
+				},
+				"title" : {
+					"type" : "string"
+				},
+				"alt"   : {
+					"type" : "string"
+				}
+			}
+		},
+		"attributes"          : {
+			"type"  : "array",
+			"items" : {
+				"type"       : "object",
+				"properties" : {
+					"name"   : {
+						"type" : "string"
+					},
+					"option" : {
+						"type"       : "object",
+						"properties" : {
+							"name" : {
+								"type" : "string"
+							},
+							"_id"  : {
+								"type" : "string"
+							},
+							"id"   : {
+								"type" : "string"
+							}
+						}
+					},
+					"_id"    : {
+						"type" : "string"
+					},
+					"id"     : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"status"              : {
+			"type" : "string"
+		},
+		"downloadable"        : {
+			"type" : "boolean"
+		},
+		"virtual"             : {
+			"type" : "boolean"
+		},
+		"manageStock"         : {
+			"type" : "boolean"
+		},
+		"sku"                 : {
+			"type" : "string"
+		},
+		"barcode"             : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"regularPrice"        : {
+			"type" : "number"
+		},
+		"salePrice"           : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"price" : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"dateOnSaleFrom"      : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateOnSaleFromGMT"   : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateOnSaleTo"        : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"dateOnSaleToGMT"     : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"purchasePrice"       : {
+			"type" : "number"
+		},
+		"supplier"            : {
+			"type" : "object",
+			"nullable" : true,
+			"properties" : {
+				"id"   : {
+					"type" : "string"
+				},
+				"name" : {
+					"type" : "string"
+				}
+			}
+		},
+		"supplierSku"         : {
+			"type" : "string"
+		},
+		"stock"               : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"stockQuantity"       : {
+			"type" : "number"
+		},
+		"backorders"          : {
+			"type" : "string"
+		},
+		"backordersAllowed"   : {
+			"type" : "boolean"
+		},
+		"outStockThreshold"   : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"lowStockThreshold"   : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"stockStatus"         : {
+			"type" : "string"
+		},
+		"outStockDate"        : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"outStockDateGMT"     : {
+			"type" : "string",
+			"nullable" : true,
+			"format" : "date-time"
+		},
+		"weight"              : {
+			"type" : "number"
+		},
+		"dimensions"          : {
+			"type"       : "object",
+			"properties" : {
+				"length" : {
+					"type" : "number"
+				},
+				"width"  : {
+					"type" : "number"
+				},
+				"height" : {
+					"type" : "number"
+				}
+			}
+		},
+		"shippingClass"       : {
+			"type" : "object",
+			"nullable" : true,
+			"properties" : {
+				"id"   : {
+					"type" : "string"
+				},
+				"_id" : {
+					"type" : "string"
+				}
+			}
+		},
+		"shippingClassId" : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"taxClass"            : {
+			"type" : "object",
+			"nullable" : true,
+			"properties" : {
+				"_id"   : {
+					"type" : "string"
+				},
+				"slug" : {
+					"type" : "string"
+				},
+				"name" : {
+					"type" : "string"
+				}
+			}
+		},
+		"taxStatus"           : {
+			"type" : "string"
+		},
+		"description"         : {
+			"type" : "string"
+		},
+		"downloads"           : {
+			"type"  : "array",
+			"items" : {
+				"type"       : "object",
+				"properties" : {
+					"id"   : {
+						"type" : "string"
+					},
+					"name" : {
+						"type" : "string"
+					},
+					"file" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"downloadLimit"       : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"downloadExpiry"      : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"atumControlled"      : {
+			"type" : "boolean"
+		},
+		"menuOrder"           : {
+			"type" : "number"
+		},
+		"miInventories"       : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "string"
+					},
+					"_id" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"inventoryStock"      : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"inventoryMainStock"  : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"multiInventory"      : {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"inventorySortingMode": {
+			"type" : "string",
+			"nullable" : true
+		},
+		"inventoryIteration"  : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"expirableInventories": {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"pricePerInventory"   : {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"selectableInventories": {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"inventorySelectionMode": {
+			"type" : "string",
+			"nullable" : true
+		},
+		"calcBackOrders"      : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"calcStockIndicator"  : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"calcWillLast"        : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"lowStockAmount"      : {
+			"type" : "string",
+			"nullable" : true
+		},
+		"customerReturns"     : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"warehouseDamage"     : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"inboundStock"        : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"lostInPost"          : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"lostSales"           : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"otherLogs"           : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"outStockDays"        : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"reservedStock"       : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"salesLastDays"       : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"soldToday"           : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"stockOnHold"         : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"atumLocations"       : {
+			"type"  : "array",
+			"items" : {
+				"type"       : "object",
+				"properties" : {
+					"id"          : {
+						"type" : "string"
+					},
+					"name"        : {
+						"type" : "string"
+					},
+					"slug"        : {
+						"type" : "string"
+					},
+					"description" : {
+						"type" : "string"
+					},
+					"parent"      : {
+						"type"       : "object",
+						"properties" : {
+							"id"   : {
+								"type" : "number"
+							},
+							"name" : {
+								"type" : "string"
+							}
+						}
+					},
+					"count"       : {
+						"type" : "number"
+					},
+					"_id"         : {
+						"type" : "string"
+					},
+					"_rev"        : {
+						"type" : "string"
+					},
+					"_deleted"    : {
+						"type" : "boolean"
+					},
+					"conflict"    : {
+						"type" : "boolean"
+					}
+				}
+			}
+		},
+		"hasLocation"         : {
+			"type" : "boolean"
+		},
+		"categories"          : {
+			"type"  : "array",
+			"items" : {
+				"type"       : "object",
+				"properties" : {
+					"id"          : {
+						"type" : "number"
+					},
+					"name"        : {
+						"type" : "string"
+					},
+					"slug"        : {
+						"type" : "string"
+					},
+					"parent"      : {
+						"type"       : "object",
+						"properties" : {
+							"id"   : {
+								"type" : "string"
+							},
+							"name" : {
+								"type" : "string"
+							}
+						}
+					},
+					"description" : {
+						"type" : "string"
+					},
+					"display"     : {
+						"type" : "string"
+					},
+					"image"       : {
+						"type"       : "object",
+						"properties" : {
+							"id"    : {
+								"type" : "string"
+							},
+							"src"   : {
+								"type" : "string"
+							},
+							"title" : {
+								"type" : "string"
+							},
+							"alt"   : {
+								"type" : "string"
+							}
+						}
+					},
+					"menuOrder"   : {
+						"type" : "number"
+					},
+					"count"       : {
+						"type" : "number"
+					},
+					"_id"         : {
+						"type" : "string"
+					},
+					"_rev"        : {
+						"type" : "string"
+					},
+					"_deleted"    : {
+						"type" : "boolean"
+					},
+					"conflict"    : {
+						"type" : "boolean"
+					}
+				}
+			}
+		},
+		"linkedBoms"          : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "string"
+					},
+					"_id" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"syncPurchasePrice"   : {
+			"type" : "boolean"
+		},
+		"isBom"               : {
+			"type" : "boolean"
+		},
+		"isUsedBom"           : {
+			"type" : "boolean"
+		},
+		"trash"               : {
+			"type" : "boolean"
+		},
+		"minimumThreshold"    : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"bomSellable"         : {
+			"type" : "boolean",
+			"nullable" : true
+		},
+		"availableToPurchase" : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"calculatedStock"     : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"bomStock"            : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"sellingPriority"     : {
+			"type" : "number",
+			"nullable" : true
+		},
+		"metaData"            : {
+			"type" : "array",
+			"items" : {
+				"type" : "object",
+				"properties" : {
+					"id" : {
+						"type" : "string"
+					},
+					"key" : {
+						"type" : "string"
+					},
+					"value" : {
+						"type" : "string"
+					}
+				}
+			}
+		},
+		"deleted"             : {
+			"type" : "boolean"
+		},
+		"_id"                 : {
+			"type" : "string"
+		},
+		"_rev"                : {
+			"type"      : "string",
+			"minLength" : 1
+		},
+		"_deleted"            : {
+			"type" : "boolean"
+		},
+		"conflict"            : {
+			"type" : "boolean"
+		},
+		"_meta"               : {
+			"type"       : "object",
+			"required"   : [
+				"lwt"
+			],
+			"properties" : {
+				"lwt" : {
+					"type"       : "number",
+					"minimum"    : 1,
+					"maximum"    : 1000000000000000,
+					"multipleOf" : 0.01
+				}
+			}
+		},
+		"_attachments"        : {
+			"type" : "object"
+		}
+	}
+}
