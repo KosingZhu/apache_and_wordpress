@@ -1,0 +1,832 @@
+# Copyright (C) 2025 StoreApps
+# This file is distributed under the GNU General Public License v2.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Stock Manager for WooCommerce 3.4.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-stock-manager\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-04-30T07:14:14+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: woocommerce-stock-manager\n"
+
+#. Plugin Name of the plugin
+msgid "Stock Manager for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.storeapps.org/woocommerce-plugins/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Manage product's stock and price in your WooCommerce store. Export/Import inventory, track history, sort and more..."
+msgstr ""
+
+#. Author of the plugin
+msgid "StoreApps"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.storeapps.org/"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:146
+msgid "No shipping class"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:163
+msgid "Taxable"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:164
+msgid "Shipping only"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:165
+msgctxt "Tax status"
+msgid "None"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:168
+msgid "No"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:169
+msgid "Notify"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:170
+msgid "Yes"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:201
+#: admin/class-stock-manager-admin.php:271
+#: admin/class-stock-manager-admin.php:272
+msgid "Stock Manager"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:206
+msgctxt "product meta box"
+msgid "Stock log"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:229
+msgctxt "product list"
+msgid "Stock log"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:295
+#: admin/class-stock-manager-admin.php:296
+msgid "Import/Export"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:303
+#: admin/class-stock-manager-admin.php:304
+msgid "Stock log"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:311
+#: admin/class-stock-manager-admin.php:312
+msgid "<span class=\"wsm_pricing_icon\"> 🔥 </span> Go Pro"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:319
+#: admin/class-stock-manager-admin.php:320
+msgid "StoreApps Plugins"
+msgstr ""
+
+#. translators: %1$s & %2$s: Opening & closing strong tag. %3$s: link to Stock Manager for WooCommerce on WordPress.org
+#: admin/class-stock-manager-admin.php:461
+msgid "If you are liking %1$sStock Manager for WooCommerce%2$s, please rate us %3$s. A huge thanks from StoreApps in advance!"
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:513
+msgctxt "default display name"
+msgid "there"
+msgstr ""
+
+#. translators: %s: discount string.
+#: admin/class-stock-manager-admin.php:576
+msgctxt "upgrade notice"
+msgid "Our best-seller Smart Manager Pro – up to <strong style=\"font-size:1.75rem;\">%s</strong>"
+msgstr ""
+
+#. translators: %s: pricing page link.
+#: admin/class-stock-manager-admin.php:587
+msgctxt "upgrade notice"
+msgid "Get <strong>all Stock Manager features + Bulk Edit</strong> + more. %s."
+msgstr ""
+
+#: admin/class-stock-manager-admin.php:589
+msgctxt "upgrade notice"
+msgid "Click here"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:54
+msgctxt "Heading: upgrade notice"
+msgid "Stock Manager’s Future is Uncertain – Switch to Smart Manager Pro"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:57
+msgctxt "Subheading: feature list"
+msgid "All Stock Manager features + Bulk Edits, Delete, Duplicate..."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:63
+msgctxt "Paragraph: upgrade explanation with strong tag"
+msgid "With growing demand for bulk editing and complete store management, we’re considering shutting down the Stock Manager plugin. <strong>Upgrade to Smart Manager Pro plugin</strong> now for all-in-one store control, boost productivity and save your time."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:83
+msgctxt "table header"
+msgid "FEATURES"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:84
+msgctxt "table header"
+msgid "STOCK MANAGER"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:85
+msgctxt "table header"
+msgid "SMART MANAGER PRO"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:91
+msgctxt "feature row"
+msgid "Supported Post Types"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:92
+msgctxt "feature value"
+msgid "Products (Stock)"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:93
+msgctxt "feature value"
+msgid "Products (Stock), Orders, Coupons, Pages, Media, Users, SEO plugins, WooCommerce Subscriptions, Bookings, Memberships, Product Add-ons, Brands... <strong>all WordPress custom post types and their custom fields</strong>."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:96
+msgctxt "feature row"
+msgid "Interface"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:97
+msgctxt "feature value"
+msgid "Table"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:98
+msgctxt "feature value"
+msgid "Excel-like spreadsheet"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:101
+msgctxt "feature row"
+msgid "Import & Export Products"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:102
+msgctxt "feature value"
+msgid "Only stock specific columns"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:103
+msgctxt "feature value"
+msgid "All product related columns - including custom fields"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:107
+msgctxt "feature row"
+msgid "Inline (Direct) Editing"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:122
+msgctxt "feature row"
+msgid "Show/Hide Admin Columns"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:137
+msgctxt "feature row"
+msgid "Product Stock Log (Product History)"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:152
+msgctxt "feature row"
+msgid "Simple Search"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:167
+msgctxt "feature row"
+msgid "Bulk Edit/Batch Update"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:178
+msgctxt "feature row"
+msgid "Undo Inline and Bulk Edits"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:189
+msgctxt "feature row"
+msgid "Schedule Bulk Edits"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:200
+msgctxt "feature row"
+msgid "Advanced Search Filters"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:211
+msgctxt "feature row"
+msgid "Saved Searches and Saved Bulk Edits"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:222
+msgctxt "feature row"
+msgid "Delete"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:222
+#: admin/includes/class-wsm-in-app-pricing.php:233
+#: admin/includes/class-wsm-in-app-pricing.php:255
+msgctxt "feature row"
+msgid "Products, Orders, Coupons and Other Post Types"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:233
+msgctxt "feature row"
+msgid "Export"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:244
+msgctxt "feature row"
+msgid "Scheduled CSV Exports for WooCommerce Orders"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:255
+msgctxt "feature row"
+msgid "Duplicate"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:266
+msgctxt "feature row"
+msgid "Create Column Sets/Custom Views"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:277
+msgctxt "feature row"
+msgid "Print PDF Invoices"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:288
+msgctxt "feature row"
+msgid "Print Packing Slips for Orders In Bulk"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:299
+msgctxt "feature row"
+msgid "Log for Any Post Type"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:310
+msgctxt "feature row"
+msgid "User-Role/User-Based Dashboard Restrictions"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:321
+msgctxt "feature row"
+msgid "View Customer Lifetime Value (LTV)"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:332
+msgctxt "feature row"
+msgid "Manage Custom Taxonomies"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:343
+msgctxt "feature row"
+msgid "Rename Admin Column Headers"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:354
+msgctxt "feature row"
+msgid "Support"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:357
+msgctxt "feature row"
+msgid "WordPress Forum"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:360
+msgctxt "feature row"
+msgid "Email, Phone, Video Calls"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:374
+msgctxt "pricing subheading"
+msgid "Limited Period Offer - Choose Your Plan"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:377
+msgctxt "pricing heading"
+msgid "Get up to 60% off on Smart Manager Pro"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:380
+msgctxt "pricing description"
+msgid "Stop opening each product to edit price, stock, category, order status, and other data. <strong>Switch to Smart Manager Pro and spend your time wisely.</strong> Say goodbye to frustration, stress, and calculation errors that keep piling up."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:388
+msgctxt "pricing badge"
+msgid "Popular"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:389
+msgctxt "pricing plan 1"
+msgid "1 site (1 year)"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:397
+msgctxt "pricing badge"
+msgid "Best Seller"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:398
+msgctxt "pricing plan 2"
+msgid "5 sites (1 year)"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:407
+msgctxt "pricing badge"
+msgid "Trending"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:408
+msgctxt "pricing plan 3"
+msgid "1 site (3 years)"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:433
+msgctxt "pricing button"
+msgid "Buy Now →"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:446
+msgctxt "review headline"
+msgid "I would happily pay five times for this product!"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:449
+msgctxt "image alt"
+msgid "Premium Top Rated WooCommerce Plugin"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:453
+msgctxt "review content"
+msgid "What really sold me on Smart Manager Pro was Bulk Edit. My assistant does not have to do any complex math now (earlier, I always feared she would make mistakes)! With Smart Manager, she has more free time at hand, so I asked her to set up auto-responder emails. The response was phenomenal. Repeat sales were up by 19.5%."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:458
+msgctxt "review author alt"
+msgid "Jeff"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:460
+msgctxt "review author name"
+msgid "Jeff Smith"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:470
+msgctxt "cta subheading"
+msgid "Trusted by thousands for a better future"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:473
+msgctxt "cta heading"
+msgid "Join 18000+ happy customers"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:477
+msgctxt "cta message part 1"
+msgid "Save time in editing orders, coupons, blog posts, users, WordPress post types, WordPress taxonomies, and more."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:478
+msgctxt "cta message part 2"
+msgid "Experience a 10x productivity boost and massive time-savings with Smart Manager Pro!"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:481
+msgctxt "cta message part 3 strong"
+msgid "Reclaim precious time"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:482
+msgctxt "cta message part 3"
+msgid "to nurture your business and cherish moments with loved ones. If you're ready for a life with"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:483
+msgctxt "cta message part 3 strong 2"
+msgid "more freedom and fulfillment"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:484
+msgctxt "cta message part 4"
+msgid "Smart Manager is your solution."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:486
+msgctxt "cta button"
+msgid "Select a Plan Now →"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:493
+msgctxt "confidence heading"
+msgid "Still hesitant? Buy with confidence – you’re in good hands"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:501
+msgctxt "subheading reputation"
+msgid "You’re buying from the best!"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:505
+msgctxt "reputation message"
+msgid "Rest assured that you will be well taken care of when you buy from StoreApps."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:508
+msgctxt "reputation bullet"
+msgid "Top selling plugins for marketing and store management"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:509
+msgctxt "reputation bullet bold part"
+msgid "Official WooCommerce"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:509
+msgctxt "reputation bullet"
+msgid "and GoDaddy partner"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:510
+msgctxt "reputation bullet"
+msgid "Founded in 2011, one of the early Woo third-party developers"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:511
+msgctxt "reputation bullet bold part"
+msgid "40k+ customers,"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:511
+msgctxt "reputation bullet"
+msgid "300k+ users, millions of downloads"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:512
+msgctxt "reputation bullet"
+msgid "Consistent 5-star review ratings"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:513
+msgctxt "reputation bullet bold part"
+msgid "WordPress"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:513
+msgctxt "reputation bullet bold part"
+msgid "community contributor"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:513
+msgctxt "reputation bullet"
+msgid "sponsor, speaker."
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:517
+msgctxt "image alt"
+msgid "Guaranteed Safe Checkout"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:525
+msgctxt "support heading"
+msgid "Friendly support from top-quality developers"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:529
+msgctxt "support description"
+msgid "Our plugins are easy to use. We also have ample documentation. But whenever you need further assistance, you will get support from the same people who develop these plugins! We make sure you succeed!"
+msgstr ""
+
+#: admin/includes/class-wsm-in-app-pricing.php:533
+msgctxt "image alt"
+msgid "StoreApps team is on your side"
+msgstr ""
+
+#: admin/views/import-export.php:110
+msgid "Import"
+msgstr ""
+
+#: admin/views/import-export.php:113
+msgid "You can upload csv file, with your stock data. "
+msgstr ""
+
+#: admin/views/import-export.php:114
+msgid "CSV file must be in this format, or you can export file with exist data and edit them. "
+msgstr ""
+
+#: admin/views/import-export.php:115
+msgid "If you have a lot of products and export/import not working, increase memory limit.. "
+msgstr ""
+
+#: admin/views/import-export.php:116
+msgid "File format"
+msgstr ""
+
+#: admin/views/import-export.php:119
+#: admin/views/import-export.php:142
+#: admin/assets/src/components/Products.js:93
+msgid "ID"
+msgstr ""
+
+#: admin/views/import-export.php:120
+#: admin/views/import-export.php:143
+#: admin/views/log.php:30
+#: admin/assets/src/components/ProductFilter.js:65
+#: admin/assets/src/components/Products.js:99
+#: admin/assets/src/components/ScreenOptions.js:38
+msgid "SKU"
+msgstr ""
+
+#: admin/views/import-export.php:121
+#: admin/assets/src/components/Products.js:115
+#: admin/assets/src/components/ScreenOptions.js:48
+msgid "Product name"
+msgstr ""
+
+#: admin/views/import-export.php:122
+#: admin/views/import-export.php:144
+#: admin/assets/src/components/Products.js:139
+#: admin/assets/src/components/ScreenOptions.js:68
+msgid "Manage stock"
+msgstr ""
+
+#: admin/views/import-export.php:123
+#: admin/views/import-export.php:145
+#: admin/assets/src/components/ProductFilter.js:113
+#: admin/assets/src/components/Products.js:142
+#: admin/assets/src/components/ScreenOptions.js:73
+msgid "Stock status"
+msgstr ""
+
+#: admin/views/import-export.php:124
+#: admin/views/import-export.php:146
+#: admin/assets/src/components/Products.js:145
+#: admin/assets/src/components/ScreenOptions.js:78
+msgid "Backorders"
+msgstr ""
+
+#: admin/views/import-export.php:125
+#: admin/views/import-export.php:147
+#: admin/views/log-history.php:49
+#: admin/views/log.php:34
+#: admin/assets/src/components/Products.js:148
+#: admin/assets/src/components/ScreenOptions.js:83
+msgid "Stock"
+msgstr ""
+
+#: admin/views/import-export.php:126
+#: admin/views/log.php:32
+#: admin/assets/src/components/Products.js:97
+msgid "Product type"
+msgstr ""
+
+#: admin/views/import-export.php:127
+#: admin/views/log.php:33
+msgid "Parent ID"
+msgstr ""
+
+#: admin/views/import-export.php:130
+msgid "123"
+msgstr ""
+
+#: admin/views/import-export.php:131
+msgid "abc111"
+msgstr ""
+
+#: admin/views/import-export.php:132
+msgid "T-shirt"
+msgstr ""
+
+#: admin/views/import-export.php:133
+#: admin/views/import-export.php:135
+msgid "yes"
+msgstr ""
+
+#: admin/views/import-export.php:134
+msgid "instock"
+msgstr ""
+
+#: admin/views/import-export.php:136
+msgid "10"
+msgstr ""
+
+#: admin/views/import-export.php:137
+msgid "simple"
+msgstr ""
+
+#: admin/views/import-export.php:142
+msgid "product id, required. Neccessary for import and export."
+msgstr ""
+
+#: admin/views/import-export.php:143
+msgid "product unique identificator."
+msgstr ""
+
+#: admin/views/import-export.php:144
+#: admin/views/import-export.php:146
+msgid "values: \"yes\", \"notify\", \"no\". If is empty \"no\" will be save."
+msgstr ""
+
+#: admin/views/import-export.php:145
+msgid "values: \"instock\", \"outofstock\". If is empty \"outofstock\" will be save."
+msgstr ""
+
+#: admin/views/import-export.php:147
+msgid "quantity value. If is empty, 0 will be save."
+msgstr ""
+
+#: admin/views/import-export.php:152
+msgid "Upload csv file"
+msgstr ""
+
+#: admin/views/import-export.php:161
+msgid "Upload"
+msgstr ""
+
+#. translators: 1: Uploaded file name
+#: admin/views/import-export.php:184
+msgid "The file %1$s has been uploaded"
+msgstr ""
+
+#. translators: 1: P tag opening 2: Updated Product ID 3. Closing p tag
+#: admin/views/import-export.php:214
+msgid "%1$s Product with ID %2$s was updated. %3$s"
+msgstr ""
+
+#: admin/views/import-export.php:223
+msgid "Sorry, there was an error uploading your file."
+msgstr ""
+
+#: admin/views/import-export.php:226
+msgid "Error: You have not uploaded a CSV file."
+msgstr ""
+
+#: admin/views/import-export.php:240
+msgid "Export"
+msgstr ""
+
+#: admin/views/import-export.php:243
+msgid "You can download csv file, with your stock data. "
+msgstr ""
+
+#: admin/views/import-export.php:244
+msgid "Create export file"
+msgstr ""
+
+#: admin/views/log-history.php:48
+msgid "Date"
+msgstr ""
+
+#: admin/views/log-history.php:69
+msgid "No result"
+msgstr ""
+
+#: admin/views/log.php:29
+msgid "Product ID"
+msgstr ""
+
+#: admin/views/log.php:31
+msgid "Name"
+msgstr ""
+
+#: admin/views/log.php:61
+#: admin/views/log.php:95
+msgid "History"
+msgstr ""
+
+#: sa-includes/class-sa-wsm-in-app-offer.php:126
+msgctxt "timezone date format"
+msgid "Y-m-d H:i:s"
+msgstr ""
+
+#: sa-includes/class-sa-wsm-in-app-offer.php:225
+msgid "Dismiss"
+msgstr ""
+
+#: sa-includes/class-sa-wsm-in-app-offer.php:225
+msgid "Hide this"
+msgstr ""
+
+#: woocommerce-stock-manager.php:77
+msgid "Alert!"
+msgstr ""
+
+#: woocommerce-stock-manager.php:77
+msgid "Stock Manager for WooCommerce needs following versions of WordPress and WooCommerce:"
+msgstr ""
+
+#: woocommerce-stock-manager.php:90
+msgid "Please update WordPress and WooCommerce to the above versions before updating Stock Manager for WooCommerce."
+msgstr ""
+
+#: woocommerce-stock-manager.php:273
+msgid "All done! Close."
+msgstr ""
+
+#: admin/assets/src/components/Product.js:150
+msgid "Variation"
+msgstr ""
+
+#: admin/assets/src/components/ProductFilter.js:75
+msgid "Search"
+msgstr ""
+
+#: admin/assets/src/components/ProductFilter.js:87
+msgid "Category"
+msgstr ""
+
+#: admin/assets/src/components/ProductFilter.js:93
+#: admin/assets/src/components/ProductFilter.js:106
+#: admin/assets/src/components/ProductFilter.js:119
+msgid "All"
+msgstr ""
+
+#: admin/assets/src/components/ProductFilter.js:100
+msgid "Type"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:53
+msgid "Loading failed"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:102
+#: admin/assets/src/components/ScreenOptions.js:43
+msgid "Thumbnail"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:121
+#: admin/assets/src/components/ScreenOptions.js:88
+msgid "Tax status"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:124
+#: admin/assets/src/components/ScreenOptions.js:93
+msgid "Tax class"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:127
+#: admin/assets/src/components/ScreenOptions.js:98
+msgid "Shipping class"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:130
+#: admin/assets/src/components/ScreenOptions.js:53
+msgid "Price"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:133
+#: admin/assets/src/components/ScreenOptions.js:58
+msgid "Sale price"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:136
+#: admin/assets/src/components/ScreenOptions.js:63
+msgid "Weight"
+msgstr ""
+
+#: admin/assets/src/components/Products.js:160
+msgid "Loading more results..."
+msgstr ""
+
+#: admin/assets/src/components/SaveChanges.js:63
+msgid "Discard changes"
+msgstr ""
+
+#: admin/assets/src/components/SaveChanges.js:64
+msgid "Save all changes"
+msgstr ""
+
+#: admin/assets/src/components/ScreenOptions.js:33
+msgid "Show columns"
+msgstr ""
