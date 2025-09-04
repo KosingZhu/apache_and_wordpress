@@ -1,9 +1,0 @@
-{
-    "apiVersion": 2,
-    "name": "notifima/stock-notification-block",
-    "title": "Stock Notification Block",
-    "category": "woocommerce",
-    "icon": "clipboard",
-    "textdomain": "notifima",
-    "editorScript": "file:./index.js"
-}
