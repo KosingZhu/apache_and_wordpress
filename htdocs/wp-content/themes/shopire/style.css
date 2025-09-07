@@ -1,0 +1,156 @@
+/*
+Theme Name: 	   Shopire
+Text Domain: 	   shopire
+Version:            1.0.39
+Tested up to:       6.8
+Requires at least:  4.7
+Requires PHP:       5.6
+Author:             WPFable
+Author URI:         https://wpfable.com/
+Theme URI:          https://wpfable.com/themes/shopire-free/
+Description:        Shopire is a fast, clean, lightweight theme. Shopire is customizable and modern-looking free responsive WooCommerce WordPress theme for e-commerce stores like clothing, fashion, electronics, ebooks, dress store, sports shop, marketplace, multivendor, equipments or online products. Theme is compatible with Elementor, WPML, Polylang, Yoast SEO, WooCommerce, Contact Form 7, Jetpack and other popular plugins. The theme is SEO friendly, WPML and RTL ready. Looking for a WooCommerce theme? Look no further! Shopire Pro demo https://demos.wpfable.com/premium/shopire/
+Tags:               one-column, two-columns ,right-sidebar, flexible-header, custom-background, custom-header, custom-menu, editor-style, featured-images, footer-widgets, post-formats, theme-options, threaded-comments, translation-ready, full-width-template, custom-logo, blog, e-commerce, portfolio
+License: GPLv3 or later
+License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+ */
+ 
+.iconbox:hover a {
+    color: #fff;
+}
+
+.iconbox a {
+    text-decoration: none;
+	color: var(--wf-secondary-color);
+}
+
+.wp-block-details summary {
+    font-weight: 600;
+    padding: 10px;
+}
+
+.wp-block-latest-comments__comment a {
+    text-decoration: none;
+}
+
+.wp-block-verse {
+    padding: 10px;
+}
+
+.wp-block-archives-list a {
+    text-decoration: none;
+}
+
+.has-background.wp-block-read-more, 
+.has-background.post-navigation-link-next,
+.has-background.post-navigation-link-previous {
+    padding: 0.25em 1.375em;
+}
+
+.wp-block-woocommerce-customer-account a .wc-block-customer-account__account-icon {
+    height: 2rem !important;
+    width: 2rem !important;
+}
+
+.wp-block-avatar img {
+    border-radius: 50%;
+}
+
+.wp-block-avatar:hover img {
+    -webkit-transform: scale(1.07);
+    transform: scale(1.07);
+}
+
+.post-navigation-link-next a,
+.post-navigation-link-previous a {
+    text-decoration: none;
+}
+
+.wp-block-woocommerce-single-product .wp-block-post-title a {
+    text-decoration: none;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:hover, 
+.wc-block-grid__product-add-to-cart.wp-block-button .wp-block-button__link:focus {
+    color: #fff;
+}
+
+.wp-block-page-list {
+    list-style: none;
+    padding: 0;
+}
+
+.wc-block-grid__products .wc-block-components-product-button__button {
+    border-radius: 0;
+    text-decoration: none;
+}
+
+.wp-block-page-list a {
+    color: var(--wf-secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wc-block-components-product-title a.wc-block-components-product-name:hover, 
+.wc-block-components-product-title a.wc-block-components-product-name:focus {
+    color: var(--wf-main-color);
+}
+
+.wp-block-page-list a:hover,
+.wp-block-page-list a:focus {
+    color: var(--wf-main-color);
+}
+
+.wp-block-list {
+    padding: 0;
+}
+
+.wc-block-components-product-name {
+    color: var(--wf-secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.wp-block-list.has-background {
+    padding: 1.25em 2.375em;
+}
+
+.wp-block-details.has-background {
+    padding: 1.25em 2.375em;
+}
+
+.wp-block-verse.has-background {
+    padding: 1.25em 2.375em;
+}
+
+.wp-block-preformatted.has-background {
+    padding: 1em;
+}
+
+.wp-block-archives {
+    list-style: none;
+    padding: 0;
+}
+
+.wp-block-archives-list a {
+    font-weight: 600;
+    color: var(--wf-secondary-color);
+}
+
+.wp-block-archives-list a:hover, 
+.wp-block-archives-list a:focus {
+    color: var(--wf-main-color);
+}
+
+.wp-block-page-list.has-background {
+    padding: 1rem;
+}
+
+a.wp-block-button__link:hover, 
+a.wp-block-button__link:focus {
+    color: #fff;
+    text-decoration: none;
+}
