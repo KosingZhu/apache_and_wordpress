@@ -1,0 +1,1 @@
+C:/Apache24/htdocs/wp-content/plugins/query-monitor/wp-content/db.php
