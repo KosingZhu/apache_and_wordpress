@@ -1,0 +1,74 @@
+# Translation of Themes - EasyBuy in Chinese (China)
+# This file is distributed under the same license as the Themes - EasyBuy package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-06-25 02:11:39+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Themes - EasyBuy\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "EasyBuy is a fast, clean, lightweight theme. EasyBuy is customizable and modern-looking free responsive WooCommerce WordPress theme for e-commerce stores like clothing, fashion, electronics, ebooks, dress store, sports shop, marketplace, multivendor, equipments or online products. Theme is compatible with Elementor, WPML, Polylang, Yoast SEO, WooCommerce, Contact Form 7, Jetpack and other popular plugins. The theme is SEO friendly, WPML and RTL ready. Looking for a WooCommerce theme? Look no further! EasyBuy Pro demo https://demos.wpfable.com/premium/easybuy/"
+msgstr "EasyBuy 是一个快速、干净、轻量级的主题。 EasyBuy 是可定制且外观现代的免费响应式 WooCommerce WordPress 主题，适用于服装、时尚、电子产品、电子书、服饰店、体育商店、市场、多供应商、设备或在线产品等电子商务商店。主题与 Elementor、WPML、Polylang、Yoast SEO、WooCommerce、Contact Form 7、Jetpack 和其他流行插件兼容。主题适合 SEO，支持 WPML 和 RTL。正在寻找 WooCommerce 主题？别再犹豫了！ EasyBuy Pro 演示 https://demos.wpfable.com/premium/easybuy/"
+
+#. Theme Name of the theme
+#: style.css
+#, gp-priority: high
+msgid "EasyBuy"
+msgstr "EasyBuy"
+
+#: theme-functions/controls/class-customize.php:71
+msgid "Ask Help ?"
+msgstr "寻求帮助？"
+
+#: theme-functions/controls/class-customize.php:69
+msgid "Pro Demo"
+msgstr "专业版演示"
+
+#: theme-functions/controls/class-customize.php:67
+msgid "Upgrade to Pro"
+msgstr "升级至Pro"
+
+#: theme-functions/controls/class-customize.php:66
+msgid "EasyBuy Pro"
+msgstr "EasyBuy Pro"
+
+#: template-parts/site-header.php:49
+msgid "9"
+msgstr "9"
+
+#: template-parts/site-header.php:49
+msgid "12"
+msgstr "12"
+
+#: template-parts/site-header.php:41 template-parts/site-header.php:70
+msgid "is--sticky"
+msgstr "is--sticky"
+
+#: header.php:19
+msgid "Skip to content"
+msgstr "跳到内容"
+
+#. Theme URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://wpfable.com/themes/easybuy-free/"
+msgstr "https://wpfable.com/themes/easybuy-free/"
+
+#. Author URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://wpfable.com/"
+msgstr "https://wpfable.com/"
+
+#. Author of the theme
+#: style.css
+#, gp-priority: low
+msgid "WPFable"
+msgstr "WPFable"
