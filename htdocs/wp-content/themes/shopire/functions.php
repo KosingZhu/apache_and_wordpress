@@ -407,3 +407,58 @@ require SHOPIRE_THEME_INC_DIR . '/customizer/controls/code/control-function/styl
  * Getting Started
  */
 require SHOPIRE_THEME_INC_DIR . '/admin/getting-started.php';
+
+// 引入自定义产品链接配置文件
+require_once get_template_directory() . '/custom-config/custom-product-link.php';
+
+/**
+ * 自定义产品轮播图中的"所有产品"链接
+ * 将默认的javascript:void(0);修改为配置文件中指定的链接
+ */
+function custom_popular_product_link($html) {
+    // 检查是否是字符串类型
+    if (!is_string($html)) {
+        return $html;
+    }
+    
+    // 检查是否是产品轮播图区域的HTML
+    if (strpos($html, 'popular-product-carousel') !== false && strpos($html, 'owl-filter-bar') !== false) {
+        // 获取自定义产品链接
+        $custom_link = shopire_get_custom_product_link();
+        // 查找并替换第一个分类链接
+        $html = preg_replace('/<a href="javascript:void\(0\);" class="item current"/', 
+                             '<a href="' . esc_url($custom_link) . '" class="item current"', 
+                             $html, 1);
+    }
+    return $html;
+}
+
+// 添加过滤器钩子到the_content
+add_filter('the_content', 'custom_popular_product_link');
+
+// 添加过滤器钩子到widget_text_content
+add_filter('widget_text_content', 'custom_popular_product_link');
+
+// 添加过滤器钩子到do_shortcode_tag，捕获短代码输出
+add_filter('do_shortcode_tag', 'custom_popular_product_link', 10, 1);
+
+/**
+ * 特殊处理动作钩子，用于wp_footer和woocommerce_before_shop_loop
+ */
+function custom_popular_product_link_action() {
+    // 创建一个专用的JavaScript函数，在页面加载后修改链接
+    echo '<script type="text/javascript">
+        jQuery(document).ready(function($) {
+            // 等待轮播图初始化完成
+            setTimeout(function() {
+                // 获取自定义产品链接（从配置文件中获取）
+                var customLink = "' . esc_js(shopire_get_custom_product_link()) . '";
+                // 修改产品轮播图中第一个分类标签的链接
+                $(\'.popular-product-carousel .owl-filter-bar a.item.current:first\').attr(\'href\', customLink);
+            }, 500);
+        });
+    </script>';
+}
+
+// 添加动作钩子到wp_footer
+add_action('wp_footer', 'custom_popular_product_link_action');
