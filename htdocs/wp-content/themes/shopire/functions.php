@@ -179,6 +179,9 @@ function shopire_scripts() {
 	// Shopire WooCommerce
 	wp_enqueue_style('shopire-woocommerce',get_template_directory_uri().'/assets/css/woo-styles.css');
 	
+	// 自定义轮播图导航按钮样式 - 将导航按钮放置在轮播图展示区域的左右两侧边缘居中位置
+	wp_enqueue_style('custom-carousel-nav', site_url('/custom-styles/custom-carousel-nav.css'));
+	
 	// Shopire Style
 	wp_enqueue_style( 'shopire-style', get_stylesheet_uri() );
 	

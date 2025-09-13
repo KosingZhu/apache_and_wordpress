@@ -1,0 +1,96 @@
+/**
+ * 自定义轮播图导航按钮样式
+ * 目的：将导航按钮放置在轮播图展示区域的左右两侧边缘居中位置
+ */
+
+/* 轮播图容器样式 */
+.popular-product-carousel .woocommerce .products.owl-carousel {
+    position: relative;
+    overflow: visible; /* 确保导航按钮可见 */
+}
+
+/* 轮播图导航容器 */
+.popular-product-carousel .woocommerce .products.owl-carousel .owl-nav {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* 导航按钮通用样式 - 深色透明效果 */
+.popular-product-carousel .woocommerce .products.owl-carousel .owl-nav button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* 深色透明背景 */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* 浅色边框 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* 白色文字确保在深色背景上清晰可见 */
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+/* 左侧导航按钮 - 放置在轮播图左侧边缘居中位置 */
+.popular-product-carousel .woocommerce .products.owl-carousel .owl-nav button.owl-prev {
+    left: 5px; /* 调整左侧边距 */
+}
+
+/* 右侧导航按钮 - 放置在轮播图右侧边缘居中位置 */
+.popular-product-carousel .woocommerce .products.owl-carousel .owl-nav button.owl-next {
+    right: 5px; /* 调整右侧边距 */
+}
+
+/* 导航按钮悬停效果 */
+.popular-product-carousel .woocommerce .products.owl-carousel .owl-nav button:hover {
+    background-color: var(--wf-main-color);
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--wf-main-color);
+}
+
+/* 导航按钮活动状态 */
+.popular-product-carousel .woocommerce .products.owl-carousel .owl-nav button.active {
+    background-color: var(--wf-main-color);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 响应式调整 - 小屏幕设备 */
+@media (max-width: 768px) {
+    .popular-product-carousel .woocommerce .products.owl-carousel .owl-nav button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    .popular-product-carousel .woocommerce .products.owl-carousel .owl-nav button.owl-prev {
+        left: 5px;
+    }
+    
+    .popular-product-carousel .woocommerce .products.owl-carousel .owl-nav button.owl-next {
+        right: 5px;
+    }
+}
+
+/* 确保轮播图容器不会遮挡导航按钮 */
+.popular-product-carousel .woocommerce {
+    position: relative;
+    z-index: 1;
+}
+
+/* 调整轮播图项的间距，确保内容与导航按钮不会重叠 */
+.popular-product-carousel .woocommerce .products.owl-carousel .owl-item {
+    padding: 0 5px;
+}
