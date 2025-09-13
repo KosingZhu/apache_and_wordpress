@@ -32,7 +32,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
                            <?php
                                 foreach ( $this->cats as $cat )
                                 {
-                                    printf('<option value="%s">%s</option>', $cat->name,$cat->name);
+                                    printf('<option value="%s">%s</option>', $cat->slug,$cat->name);
 									
 									
                                 }
