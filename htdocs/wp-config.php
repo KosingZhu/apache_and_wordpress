@@ -1,6 +1,7 @@
 <?php
 define( 'WP_CACHE', true );
 
+
 /**
  * The base configuration for WordPress
  *
@@ -91,6 +92,16 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+// 增加WordPress内存限制以支持大文件上传
+define( 'WP_MEMORY_LIMIT', '256M' );    // 前台内存限制
+define( 'WP_MAX_MEMORY_LIMIT', '256M' );    // 后台内存限制
+
+// 增加WordPress上传文件大小限制
+ini_set( 'upload_max_filesize' , '200M' );
+ini_set( 'post_max_size', '210M' );
+ini_set( 'memory_limit', '256M' );
+ini_set( 'max_execution_time', '300' );    // 增加执行时间到5分钟
+ini_set( 'max_input_time', '300' );    // 增加输入时间到5分钟
 
 
 /* That's all, stop editing! Happy publishing. */
