@@ -193,6 +193,9 @@ function shopire_scripts() {
 	// Shopire Style
 	wp_enqueue_style( 'shopire-style', get_stylesheet_uri() );
 	
+	// 自定义搜索框和按键样式 - 将按键紧挨搜索框并保持自适应
+	wp_enqueue_style( 'custom-header-styles', get_template_directory_uri() . '/assets/css/custom/custom-styles.css', array('shopire-theme'), '1.0.0', 'all' );
+	
 	// Scripts
 	wp_enqueue_script( 'jquery' );
 	

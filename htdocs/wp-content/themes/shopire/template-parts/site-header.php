@@ -28,9 +28,11 @@ $shopire_hs_hdr_bcat   = get_theme_mod( 'shopire_hs_hdr_bcat','1');
 										</nav>
 										<div class="wf_navbar-right">
 											<ul class="wf_navbar-list-right">
+												<?php do_action('shopire_woo_cart'); ?>                                                    
+												<?php do_action('shopire_hcompare'); ?>    
+												<?php do_action('shopire_hwishlist'); ?>
 												<?php do_action('shopire_hdr_account'); ?>
-												<?php do_action('shopire_hdr_side_docker'); ?>
-												<?php do_action('shopire_header_button'); ?>                                                       
+												<?php do_action('shopire_hdr_side_docker'); ?> 
 											</ul>
 										</div>
 									</div>
@@ -43,15 +45,15 @@ $shopire_hs_hdr_bcat   = get_theme_mod( 'shopire_hs_hdr_bcat','1');
 									</div>
 								<?php endif; ?>	
 								<div class="wf-col-lg-<?php if(!class_exists( 'woocommerce' )): esc_attr_e('9','shopire'); else: esc_attr_e('6','shopire'); endif; ?> wf-col-12">
-									<?php do_action('shopire_hdr_product_search'); ?>
+									<div class="header-search-button-container">
+										<?php do_action('shopire_hdr_product_search'); ?>
+										<?php do_action('shopire_header_button'); ?>
+									</div>
 								</div>
 								<div class="wf-col-lg-3 wf-col-12">
 									<div class="wf_navbar-right">
 										<ul class="wf_navbar-list-right">
-											<?php do_action('shopire_header_contact'); ?>
-											<?php do_action('shopire_woo_cart'); ?>                                                   
-											<?php do_action('shopire_hcompare'); ?>    
-											<?php do_action('shopire_hwishlist'); ?> 
+											<?php do_action('shopire_header_contact'); ?> 
 										</ul>
 									</div>
 								</div>

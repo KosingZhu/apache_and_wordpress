@@ -1,0 +1,112 @@
+/* 搜索框和按键容器样式 - 使按键紧挨搜索框 */
+.header-search-button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* 确保下拉框不会被容器裁剪 */
+    overflow: visible;
+    position: relative;
+    /* 确保容器和内部元素正确对齐 */
+    align-items: stretch;
+    height: 46px; /* 设置统一高度，根据实际情况调整 */
+}
+
+/* 确保搜索框在容器中占据主要空间并与按钮垂直对齐 */
+.header-search-button-container .woocommerce-product-search {
+    flex: 1;
+    margin: 0;
+    position: relative;
+    /* 确保下拉框在最上层 */
+    z-index: 10;
+    /* 确保搜索框与按钮在同一水平线上 */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* 确保搜索框内部元素也垂直对齐 */
+    .search-wrapper, .header-search-select-wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    /* 确保搜索输入框垂直居中 */
+    .header-search-input {
+        height: 100%;
+        margin: 0;
+        padding: 0 15px;
+    }
+    /* 确保搜索按钮垂直居中 */
+    .header-search-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+/* 确保分类下拉框能正确显示 */
+.header-search-form {
+    position: relative;
+    z-index: 10;
+}
+
+/* 确保分类下拉框容器不会限制下拉内容 */
+.header-search-select-wrapper {
+    position: relative;
+    z-index: 20;
+}
+
+/* 确保下拉框元素正确显示 */
+.header-search-select {
+    position: relative;
+    z-index: 20;
+    /* 确保下拉内容有足够的显示空间 */
+}
+
+/* 确保搜索框内的所有绝对定位元素都能正确显示 */
+.search-wrapper {
+    position: relative;
+    z-index: 5;
+}
+
+/* 确保按钮的父元素不影响对齐 */
+.header-search-button-container .wf_navbar-button-item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* 确保按键在容器中正确显示并与搜索框垂直对齐 */
+.header-search-button-container .wf-btn {
+    white-space: nowrap;
+    /* 确保按钮与搜索框在同一水平线上 */
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    height: 100%;
+    padding: 0 20px;
+    margin: 0;
+}
+
+/* 响应式调整 - 在小屏幕上堆叠显示 */
+@media (max-width: 767px) {
+    .header-search-button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .header-search-button-container .wf-btn {
+        width: 100%;
+    }
+}
+
+/* 确保中等屏幕上的合适显示 */
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-search-button-container {
+        flex-wrap: wrap;
+    }
+}
