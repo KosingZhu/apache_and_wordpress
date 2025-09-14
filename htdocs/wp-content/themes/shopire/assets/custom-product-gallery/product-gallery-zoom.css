@@ -1,0 +1,103 @@
+/*
+ * 产品图片放大预览样式
+ * 定义图片预览容器、图片和关闭按钮的样式
+ */
+
+/* 图片预览容器 */
+.product-image-zoom-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* 预览容器激活状态 */
+.product-image-zoom-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 预览内容容器 */
+.product-image-zoom-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 预览图片 */
+.product-image-zoom-image {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+}
+
+/* 关闭按钮 */
+.product-image-zoom-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.product-image-zoom-close:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 防止body滚动 */
+body.product-image-zoom-open {
+    overflow: hidden;
+}
+
+/* 主图和缩略图的鼠标指针 */
+.gallery-main-image img {
+    cursor: zoom-in;
+}
+
+.gallery-thumbnail img {
+    cursor: pointer;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .product-image-zoom-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+    
+    .product-image-zoom-image {
+        max-height: 75vh;
+    }
+    
+    .product-image-zoom-close {
+        top: 10px;
+        right: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}

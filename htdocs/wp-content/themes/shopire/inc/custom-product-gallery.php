@@ -27,6 +27,15 @@ function shopire_enqueue_product_gallery_assets() {
         );
         wp_enqueue_style( 'custom-product-gallery' );
         
+        // 注册并加载图片放大预览CSS文件
+        wp_register_style(
+            'custom-product-gallery-zoom',
+            get_template_directory_uri() . '/assets/custom-product-gallery/product-gallery-zoom.css',
+            array(),
+            $theme_version
+        );
+        wp_enqueue_style( 'custom-product-gallery-zoom' );
+        
         // 注册并加载JavaScript文件
         wp_register_script(
             'custom-product-gallery',
@@ -37,7 +46,17 @@ function shopire_enqueue_product_gallery_assets() {
         );
         wp_enqueue_script( 'custom-product-gallery' );
         
-        // 确保加载Font Awesome图标库，用于导航按钮
+        // 注册并加载优化版图片放大预览JavaScript文件，解决点击图片跳转到源URL的问题
+        wp_register_script(
+            'custom-product-gallery-zoom',
+            get_template_directory_uri() . '/assets/custom-product-gallery/product-gallery-zoom-optimized.js',
+            array( 'jquery' ), // 依赖jQuery
+            '1.1',
+            true // 在页脚加载
+        );
+        wp_enqueue_script( 'custom-product-gallery-zoom' );
+        
+        // 确保加载Font Awesome图标库，用于导航按钮和关闭按钮
         if ( ! wp_style_is( 'font-awesome', 'enqueued' ) ) {
             wp_enqueue_style(
                 'font-awesome',
