@@ -1,0 +1,173 @@
+/**
+ * 产品图片轮播样式
+ * 实现主图展示和缩略图水平轮播效果
+ */
+
+/* 自定义产品图库容器 */
+.woocommerce-product-gallery.custom-product-gallery {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+/* 主图容器 */
+.gallery-main-image {
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.gallery-main-image img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+/* 缩略图容器 */
+.gallery-thumbnails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f1f1f1;
+}
+
+/* 缩略图滚动条样式 */
+.gallery-thumbnails::-webkit-scrollbar {
+    height: 6px;
+}
+
+.gallery-thumbnails::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.gallery-thumbnails::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.gallery-thumbnails::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* 缩略图样式 */
+.gallery-thumbnail {
+    flex: 0 0 auto;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.gallery-thumbnail:hover {
+    border-color: var(--wf-main-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-thumbnail.active {
+    border-color: var(--wf-main-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-thumbnail:hover img {
+    transform: scale(1.1);
+}
+
+/* 导航按钮 */
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: var(--wf-secondary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-nav:hover {
+    background-color: var(--wf-main-color);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-nav-prev {
+    left: 10px;
+}
+
+.gallery-nav-next {
+    right: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .gallery-main-image {
+        max-height: 300px;
+    }
+    
+    .gallery-main-image img {
+        max-height: 300px;
+    }
+    
+    .gallery-thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .gallery-nav {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-thumbnails {
+        gap: 6px;
+    }
+    
+    .gallery-thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .gallery-nav {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+}

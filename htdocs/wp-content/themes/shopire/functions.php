@@ -483,3 +483,9 @@ function custom_popular_product_link_action() {
 
 // 添加动作钩子到wp_footer
 add_action('wp_footer', 'custom_popular_product_link_action');
+
+/**
+ * 引入自定义产品图片轮播功能
+ * 用于产品详情页的图片展示优化
+ */
+require_once get_template_directory() . '/inc/custom-product-gallery.php';
