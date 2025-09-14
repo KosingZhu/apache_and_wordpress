@@ -6,9 +6,7 @@
 
 jQuery(document).ready(function($) {
     'use strict';
-    
-    console.log('优化版产品图库放大功能已加载');
-    
+
     // 创建并缓存预览容器元素
     let previewContainer = null;
     let previewImage = null;
@@ -19,11 +17,9 @@ jQuery(document).ready(function($) {
      */
     function initPreviewContainer() {
         if (previewContainer && previewContainer.length) {
-            console.log('复用已存在的预览容器');
             return;
         }
         
-        console.log('创建新的预览容器');
         // 创建预览容器，使用与CSS匹配的类名
         previewContainer = $('<div>', {
             'id': 'product-image-zoom-container',
@@ -71,7 +67,6 @@ jQuery(document).ready(function($) {
      * 打开图片预览
      */
     function openImageZoom(imgSrc) {
-        console.log('打开图片预览:', imgSrc);
         
         if (!previewContainer) {
             initPreviewContainer();
@@ -93,8 +88,6 @@ jQuery(document).ready(function($) {
     function closeImageZoom() {
         if (!previewContainer) return;
         
-        console.log('关闭图片预览');
-        
         // 隐藏预览容器，使用CSS中定义的激活方式
         previewContainer.removeClass('active');
         
@@ -106,7 +99,6 @@ jQuery(document).ready(function($) {
      * 模拟轮播切换
      */
     function simulateCarouselChange(targetImageSrc) {
-        console.log('模拟轮播切换到:', targetImageSrc);
         
         // 获取主图容器
         const mainImageContainer = $('.woocommerce-product-gallery__image');
@@ -136,7 +128,6 @@ jQuery(document).ready(function($) {
      * 主初始化函数
      */
     function initProductGalleryZoom() {
-        console.log('开始初始化产品图库放大功能');
         
         // 初始化预览容器
         initPreviewContainer();
@@ -149,7 +140,6 @@ jQuery(document).ready(function($) {
         
         // 使用document级委托事件捕获，确保捕获所有产品图片点击
         $(document).on('click.productZoom', '.woocommerce-product-gallery img', function(e) {
-            console.log('捕获到产品图库图片点击');
             
             // 阻止默认行为和冒泡
             e.preventDefault();
@@ -175,7 +165,6 @@ jQuery(document).ready(function($) {
         
         // 特别处理缩略图链接点击事件
         $(document).on('click.productZoom', '.woocommerce-product-gallery__thumbnails a', function(e) {
-            console.log('捕获到缩略图链接点击');
             
             // 阻止默认跳转
             e.preventDefault();
@@ -194,19 +183,15 @@ jQuery(document).ready(function($) {
             
             return false;
         });
-        
-        console.log('产品图库放大功能初始化完成');
     }
     
     // 在DOM完全加载后初始化
     $(window).on('load', function() {
-        console.log('窗口加载完成，准备初始化产品图库放大功能');
         initProductGalleryZoom();
         
         // 为了确保兼容性，添加一个延迟初始化作为备选方案
         setTimeout(function() {
             if (!previewContainer) {
-                console.log('执行延迟初始化');
                 initProductGalleryZoom();
             }
         }, 1000);
