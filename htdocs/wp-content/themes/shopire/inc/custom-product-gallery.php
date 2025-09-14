@@ -36,6 +36,15 @@ function shopire_enqueue_product_gallery_assets() {
         );
         wp_enqueue_style( 'custom-product-gallery-zoom' );
         
+        // 注册并加载更新后的产品布局修复CSS文件 - 移除了!important标记并确保图片不被裁剪
+        wp_register_style(
+            'product-layout-fix',
+            get_template_directory_uri() . '/assets/css/custom/product-layout-fix-updated.css',
+            array(),
+            $theme_version
+        );
+        wp_enqueue_style( 'product-layout-fix' );
+        
         // 注册并加载JavaScript文件
         wp_register_script(
             'custom-product-gallery',

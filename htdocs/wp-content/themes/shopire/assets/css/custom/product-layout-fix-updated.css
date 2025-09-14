@@ -1,0 +1,172 @@
+/* 主产品容器 - 添加相对定位以确保子元素的绝对定位基于此容器 */
+.woocommerce.single-product div.product {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    overflow: visible;
+}
+
+/* 创建新的产品主内容容器，整合图片区和描述区 */
+.product-main-content-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+/* 确保图片展示区域和产品概述区域正确左右排列，不限制内部图片大小 */
+.woocommerce.single-product div.product div.images {
+    float: left;
+    width: 40%;
+    margin-right: 5%;
+    position: relative;
+    z-index: 1;
+    display: block;
+    overflow: visible;
+}
+
+.woocommerce.single-product div.product div.summary {
+    float: left;
+    width: 55%;
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    padding: 15px 0;
+    display: block;
+    clear: none;
+}
+
+/* 确保产品详情选项卡位于产品主内容容器下方 */
+.woocommerce.single-product div.product {
+    /* 调整主容器的布局结构 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 相关产品区域样式 */
+.related.products {
+    clear: both;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    padding-top: 20px;
+}
+
+/* 确保图片区的导航按钮不会覆盖描述区内容 */
+.woocommerce div.product div.images .owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 100%;
+}
+
+.woocommerce div.product div.images .owl-nav button {
+    position: absolute;
+    z-index: 3;
+}
+
+/* 响应式设计 - 确保在不同屏幕尺寸下正确显示 */
+@media (max-width: 768px) {
+    .product-main-content-container {
+        flex-direction: column;
+    }
+    
+    .woocommerce div.product div.images {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .woocommerce div.product div.summary {
+        float: none;
+        width: 100%;
+    }
+    
+    /* 移动端图片不限制大小，根据实际尺寸自适应 */
+    .gallery-main-image {
+        max-height: none;
+        overflow: visible;
+        background-color: transparent;
+    }
+    
+    .gallery-main-image img {
+        max-height: none;
+        width: auto;
+    }
+}
+
+/* 确保产品图库的图片尺寸不会导致溢出或覆盖问题，允许图片完全显示 */
+.woocommerce-product-gallery {
+    max-width: 100%;
+    overflow: visible;
+}
+
+.woocommerce-product-gallery__wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.woocommerce-product-gallery__image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* 确保图片不被裁剪 */
+}
+
+/* 调整产品图库样式，确保主图容器底部坐标明确，作为选项卡位置参考点 */
+.gallery-main-image {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 80px;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+}
+
+/* 确保主图图片正确显示，不影响容器底部坐标 */
+.gallery-main-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto; /* 保持图片原始比例 */
+    object-fit: contain; /* 确保图片不被裁剪 */
+    transition: opacity 0.3s ease;
+    display: block;
+}
+
+/* 确保产品详情选项卡始终清晰显示在主图下方，配置为透明背景 */
+.woocommerce-tabs.wc-tabs-wrapper {
+    clear: both;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+    background-color: transparent; /* 设置透明背景 */
+    padding-bottom: 20px;
+}
+
+/* 修改缩略图样式，确保图片不被裁剪 */
+.gallery-thumbnail {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-thumbnail img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 确保缩略图不被裁剪 */
+    transition: transform 0.3s ease;
+}
