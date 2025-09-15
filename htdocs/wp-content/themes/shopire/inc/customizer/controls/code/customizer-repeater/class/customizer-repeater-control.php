@@ -571,7 +571,7 @@ class SHOPIRE_Repeater extends WP_Customize_Control {
 					
 					
 					if($this->customizer_repeater_bg_type == true){
-							$this->bg_type(isset($bg_type) ? $bg_type : 'image');
+							$this->bg_type($bg_type);
 							
 						}
 						
@@ -703,12 +703,9 @@ class SHOPIRE_Repeater extends WP_Customize_Control {
 						}
 					
 					if($this->customizer_repeater_slide_align == true){
-							if (isset($slide_align)) {
-								$this->slide_align($slide_align);
-							} else {
-								$this->slide_align();
-							}	
-					}
+							$this->slide_align($slide_align);
+							
+						}
 						
 						
 					

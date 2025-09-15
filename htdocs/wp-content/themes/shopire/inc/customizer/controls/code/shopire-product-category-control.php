@@ -30,9 +30,11 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
                       <span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
                       <select multiple <?php $this->link(); ?>>
                            <?php
-                                foreach ( is_array($this->cats) ? $this->cats : [] as $cat )
+                                foreach ( $this->cats as $cat )
                                 {
                                     printf('<option value="%s">%s</option>', $cat->slug,$cat->name);
+									
+									
                                 }
                            ?>
                       </select>

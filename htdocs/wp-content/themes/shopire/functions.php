@@ -154,7 +154,7 @@ add_action( 'widgets_init', 'shopire_widgets_init' );
  * Enqueue scripts and styles.
  */
 function shopire_scripts() {
-    
+	
 	/**
 	 * Styles.
 	 */
@@ -181,14 +181,6 @@ function shopire_scripts() {
 	
 	// 自定义轮播图导航按钮样式 - 将导航按钮放置在轮播图展示区域的左右两侧边缘居中位置
 	wp_enqueue_style('custom-carousel-nav', site_url('/custom-styles/custom-carousel-nav.css'));
-    
-    // 自定义产品属性文本样式 - 调整属性文本的背景颜色填充面积，使其根据文本长度自动调整
-    wp_enqueue_style('custom-attribute-styles', 
-        get_template_directory_uri() . '/custom-config/custom-attribute-styles.css', 
-        array('shopire-woocommerce'), 
-        '1.0.0', 
-        'all' 
-    );
 	
 	// Shopire Style
 	wp_enqueue_style( 'shopire-style', get_stylesheet_uri() );
@@ -419,18 +411,8 @@ require SHOPIRE_THEME_INC_DIR . '/customizer/controls/code/control-function/styl
  */
 require SHOPIRE_THEME_INC_DIR . '/admin/getting-started.php';
 
-// 自定义产品轮播图链接功能
+// 引入自定义产品链接配置文件
 require_once get_template_directory() . '/custom-config/custom-product-link.php';
-
-/**
- * 自定义产品属性文本显示
- * 通过过滤器修改属性标签，添加适当的HTML结构以便应用自定义样式
- */
-add_filter( 'woocommerce_attribute_label', 'shopire_custom_attribute_label', 10, 3 );
-function shopire_custom_attribute_label( $label, $name, $product ) {
-    // 不需要修改标签文本，只需要确保CSS能够正确应用
-    return $label;
-}
 
 /**
  * 自定义产品轮播图中的"所有产品"链接
